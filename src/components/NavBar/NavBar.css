@@ -1,0 +1,20 @@
+.navBarMain {
+  color: white;
+  /* display: flex;
+  justify-content: center; */
+  display: grid;
+  /* grid-template-columns: 1fr, 1fr, 1fr; */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.navLinks {
+  grid-column: 1/2;
+}
+
+
+.title {
+  grid-column: 2/3;
+  display: flex;
+  justify-content: center;
+  font-size: 3.6rem;
+}

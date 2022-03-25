@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  /* background-color: #272727; */
 }
 
 .App-logo {
@@ -35,4 +36,16 @@
   to {
     transform: rotate(360deg);
   }
+}
+/* 
+div#app {
+  background-color: #272727;
+} */
+
+.mainBody {
+  /* background-color: #272727; */
+  min-width: 50rem;
+  min-height: 90rem;
+  background-color: #272727;
+  border-radius: 10px;
 }
