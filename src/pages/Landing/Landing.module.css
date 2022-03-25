@@ -1,5 +1,42 @@
 .container {
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+}
+
+img {
+  margin: 10rem 0 10rem 0;
+}
+
+button {
+  margin: 2rem 0 2rem 0;
+  border-radius: 10px;
+  /* border-color: #6661F1; */
+  width: 36rem;
+  height: 5rem;
+  /* background-color: transparent;
+  color: #6661F1; */
+  background-color: #6661F1;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 2rem;
+  transition: none;
+  box-shadow: none;
+}
+
+
+button:hover {
+  background-color: white;
+  color:  #6661F1;
+  
+}
+
+button:focus {
+  box-shadow: none;
 }

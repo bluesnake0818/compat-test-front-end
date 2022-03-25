@@ -44,7 +44,7 @@ div#app {
 
 .mainBody {
   /* background-color: #272727; */
-  min-width: 50rem;
+  width: 50rem;
   min-height: 90rem;
   background-color: #272727;
   border-radius: 10px;
