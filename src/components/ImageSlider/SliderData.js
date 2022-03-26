@@ -1,11 +1,38 @@
 export const SliderData = [
   { 
-    image: 'https://i.imgur.com/6iranE9_d.webp?maxwidth=760&fidelity=grand'
+    image: '/designs_rat.png'
   },
   { 
-    image: 'https://i.imgur.com/UJ4lQkE_d.webp?maxwidth=760&fidelity=grand'
+    image: '/designs_ox.png'
   },
   { 
-    image: 'https://i.imgur.com/0gA6QUW_d.webp?maxwidth=760&fidelity=grand'
+    image: '/designs_tiger.png'
   },
+  { 
+    image: '/designs_rabbit.png'
+  },
+  { 
+    image: '/designs_dragon.png'
+  },
+  { 
+    image: '/designs_snake.png'
+  },
+  { 
+    image: '/designs_horse.png'
+  },
+  { 
+    image: '/designs_goat.png'
+  },
+  { 
+    image: '/designs_monkey.png'
+  },
+  { 
+    image: '/designs_rooster.png'
+  },
+  { 
+    image: '/designs_dog.png'
+  },
+  { 
+    image: '/designs_pig.png'
+  }    
 ]

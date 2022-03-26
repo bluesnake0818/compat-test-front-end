@@ -2,7 +2,7 @@
   position: relative;
   height: 100vh;
   display: flex;
-  justify-content: cneter;
+  justify-content: center;
   align-items: center;
 }
 
@@ -16,7 +16,7 @@
   top: 50%;
   right: 3.2rem;
   font-size: 3rem;
-  color: #000000;
+  color: #ffffff;
   z-index: 10;
   cursor: pointer;
   user-select: none;
@@ -27,7 +27,7 @@
   top: 50%;
   left: 3.2rem;
   font-size: 3rem;
-  color: #000000;
+  color: #ffffff;
   z-index: 10;
   cursor: pointer;
   user-select: none;

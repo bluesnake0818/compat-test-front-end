@@ -3,10 +3,6 @@
   /* background-color: #272727; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -37,13 +33,8 @@
     transform: rotate(360deg);
   }
 }
-/* 
-div#app {
-  background-color: #272727;
-} */
 
 .mainBody {
-  /* background-color: #272727; */
   width: 50rem;
   min-height: 90rem;
   background-color: #272727;
