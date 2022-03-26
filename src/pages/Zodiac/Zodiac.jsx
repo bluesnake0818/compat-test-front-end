@@ -1,10 +1,9 @@
-const Zodiac = () => {
+// import './Zodiac.css'
+import ImageSlider from "../../components/ImageSlider";
+import { SliderData } from '../../components/SliderData';
 
-  return (
-    <>
-      <h1>Day Zodiac:</h1>
-    </>
-  );
+function Zodiac() {
+  return <ImageSlider slides={SliderData} />
 }
- 
-export default Zodiac
+
+export default Zodiac;
