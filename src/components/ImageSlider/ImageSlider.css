@@ -1,11 +1,17 @@
-.slider {
-  position: relative;
-  height: 100vh;
+/* .sliderShell {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center;  
+} */
+
+.slider {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1.4rem;
 }
 
 .image {
@@ -53,8 +59,43 @@
 
 h1{
   text-align: left;
+  font-size: 3.2rem;
 }
 
-p{
-  font-size: 1.4rem;
+div.zodiac-desc {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  width: 30rem;
+}
+
+p.bff, p.nemesis{
+  width: 15rem;
+}
+
+button {
+  margin: 2rem 0 2rem 0;
+  border-radius: 10px;
+  /* border-color: #6661F1; */
+  width: 36rem;
+  height: 5rem;
+  /* background-color: transparent;
+  color: #6661F1; */
+  background-color: #6661F1;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 2rem;
+  transition: none;
+  box-shadow: none;
+}
+
+
+button:hover {
+  background-color: white;
+  color:  #6661F1;
+  
+}
+
+button:focus {
+  box-shadow: none;
 }

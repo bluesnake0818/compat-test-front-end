@@ -2,6 +2,7 @@ import './ImageSlider.css'
 import React, {useState} from 'react'
 import { SliderData } from './SliderData';
 import {FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'
+import { NavLink } from 'react-router-dom'
 
 const ImageSlider = ({ slides }) => {
   const [current, setCurrent] = useState(0)
@@ -23,29 +24,33 @@ const ImageSlider = ({ slides }) => {
 
 
   return (
-    <section className='slider'>
-      <FaArrowAltCircleLeft className='left-arrow' onClick={prevSlide} />
-      <FaArrowAltCircleRight className='right-arrow' onClick={nextSlide} />
-      {SliderData.map((slide, index) => {
-        return (
-          <div className={index === current ? 'slide active' : 'slide'} key={index}>
-            {
-              index === current && 
-              (
-                <>
-                  <h1>Zodiac: {slide.name}</h1>
-                  <img src={ slide.image } alt="zodiac image" className='image' />
-                  <p>Defining Traits: {  slide.traits }</p>
-                  <p>BFF: { slide.bff }</p>
-                  <p>Nemesis:  { slide.nemesis }</p>
-                </>
-              )
-            }
-          </div>
-        ) 
-      })}
-      
-    </section>
+    <div className='sliderShell'>
+      <section className='slider'>
+        <FaArrowAltCircleLeft className='left-arrow' onClick={prevSlide} />
+        <FaArrowAltCircleRight className='right-arrow' onClick={nextSlide} />
+        {SliderData.map((slide, index) => {
+          return (
+            <div className={index === current ? 'slide active' : 'slide'} key={index}>
+              {
+                index === current && 
+                (
+                  <>
+                    <img src={ slide.image } alt="zodiac image" className='image' />
+                    <div className='zodiac-desc'>
+                      <p>Zodiac: {slide.name}</p>
+                      <p>Defining Traits: { slide.traits } </p> 
+                      <p className='bff'>BFF: { slide.bff } </p> 
+                      <p className='nemesis'>Nemesis: { slide.nemesis } </p> 
+                    </div>
+                  </>
+                )
+              }
+            </div>
+          ) 
+        })}  
+      </section>
+      <NavLink to='/login_or_signup'><button className='button'>More...</button></NavLink>                  
+    </div>
   )
 }
 
