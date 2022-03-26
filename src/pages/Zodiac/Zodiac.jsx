@@ -1,13 +1,14 @@
 import './Zodiac.css'
 import ImageSlider from "../../components/ImageSlider/ImageSlider";
 import { SliderData } from "../../components/ImageSlider/SliderData";
-import { NavLink } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import SignupOrLogin from '../SignupOrLogin/SignupOrLogin'
 
 function Zodiac() {
   return (
     <div className='zodiac'>
       <ImageSlider slides={SliderData} />
-      <NavLink to='/login_or_signup'><button className='button'>More...</button></NavLink>    
+      <Link to='/SignupOrLogin'><button className='button'>More...</button></Link>    
     </div>
   )
 }

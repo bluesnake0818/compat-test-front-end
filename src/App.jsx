@@ -6,6 +6,7 @@ import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import Zodiac from './pages/Zodiac/Zodiac'
+import SignupOrLogin from './pages/SignupOrLogin/SignupOrLogin'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import * as authService from './services/authService'
 import './App.css'
@@ -34,7 +35,11 @@ const App = () => {
         />
         <Route
           path="/zodiac"
-          element={<Zodiac user={user} />}
+          element={<Zodiac />}
+        />
+        <Route
+          path="/signupOrLogin"
+          element={<SignupOrLogin />}
         />
         <Route
           path="/signup"
