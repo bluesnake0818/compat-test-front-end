@@ -5,7 +5,7 @@ function Compat() {
   return (
     <div className='compat'>
       <h3>Compatibility Tests</h3>
-      <Link to='Compat/Create'><button className='button'>Add Friend</button></Link>    
+      <Link to='/AddFriend'><button className='button'>Add Friend</button></Link>    
       <p>You have no friends yet.</p>
     </div>
   )

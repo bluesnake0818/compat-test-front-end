@@ -9,6 +9,7 @@ import Zodiac from './pages/Zodiac/Zodiac'
 import SignupOrLogin from './pages/SignupOrLogin/SignupOrLogin'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import Compat from './pages/Compat/Compat'
+import AddFriend from './pages/AddFriend/AddFriend'
 import * as authService from './services/authService'
 import './App.css'
 
@@ -61,6 +62,10 @@ const App = () => {
         <Route
           path="/compat"
           element={<Compat />}
+        />
+        <Route
+          path="/AddFriend"
+          element={<AddFriend />}
         />
       </Routes>
     </div>
