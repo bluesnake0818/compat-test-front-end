@@ -8,7 +8,7 @@ function Zodiac() {
   return (
     <div className='zodiac'>
       <ImageSlider slides={SliderData} />
-      <Link to='/SignupOrLogin'><button className='button'>More...</button></Link>    
+      <Link to='/SignupOrLogin'><button className='button'>Learn More</button></Link>    
     </div>
   )
 }

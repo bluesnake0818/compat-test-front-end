@@ -1,0 +1,23 @@
+main {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+.links {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+p{
+  font-size: 1rem;
+}
