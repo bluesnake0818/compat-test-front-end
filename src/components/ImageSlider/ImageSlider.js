@@ -24,7 +24,6 @@ const ImageSlider = ({ slides }) => {
 
 
   return (
-    <div className='sliderShell'>
       <section className='slider'>
         <FaArrowAltCircleLeft className='left-arrow' onClick={prevSlide} />
         <FaArrowAltCircleRight className='right-arrow' onClick={nextSlide} />
@@ -49,8 +48,6 @@ const ImageSlider = ({ slides }) => {
           ) 
         })}  
       </section>
-      <NavLink to='/login_or_signup'><button className='button'>More...</button></NavLink>                  
-    </div>
   )
 }
 
