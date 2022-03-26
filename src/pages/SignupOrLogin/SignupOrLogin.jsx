@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './SignupOrLogin.css'
 import { Link } from 'react-router-dom'
 

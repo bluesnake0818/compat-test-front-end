@@ -10,6 +10,7 @@ const SignupForm = props => {
     email: '',
     password: '',
     passwordConf: '',
+    dob: null,
   })
 
   const handleChange = e => {
@@ -31,10 +32,10 @@ const SignupForm = props => {
     }
   }
 
-  const { name, email, password, passwordConf } = formData
+  const { name, email, password, passwordConf, dob } = formData
 
   const isFormInvalid = () => {
-    return !(name && email && password && password === passwordConf)
+    return !(name && email && password && password === passwordConf && dob)
   }
 
   return (
@@ -86,6 +87,17 @@ const SignupForm = props => {
           id="confirm"
           value={passwordConf}
           name="passwordConf"
+          onChange={handleChange}
+        />
+      </div>
+      <div className={styles.inputContainer}>
+      <label htmlFor="password" className={styles.label}>Date of Birth</label>
+        <input
+          type="date"
+          autoComplete="off"
+          id="dob"
+          value={dob}
+          name="dob"
           onChange={handleChange}
         />
       </div>

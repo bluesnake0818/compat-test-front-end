@@ -2,7 +2,6 @@ import './Zodiac.css'
 import ImageSlider from "../../components/ImageSlider/ImageSlider";
 import { SliderData } from "../../components/ImageSlider/SliderData";
 import { Link } from 'react-router-dom';
-import SignupOrLogin from '../SignupOrLogin/SignupOrLogin'
 
 function Zodiac() {
   return (
