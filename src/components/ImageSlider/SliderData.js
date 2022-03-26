@@ -1,50 +1,110 @@
 export const SliderData = [
   { 
     image: '/designs_rat.png',
-    name: 'Rat'
+    name: 'Rat',
+    traits: 'Acute, Cautious, Calm',
+    bff: 'Ox',
+    nemesis: 'Horse',
+    years: '',
+    element: '',
   },
   { 
     image: '/designs_ox.png',
-    name: 'Ox'
+    name: 'Ox', 
+    traits: 'Persistent, Cautious, Patient',
+    bff: 'Rat',
+    nemesis: 'Goat',
+    years: '',
+    element: '',
   },
   { 
     image: '/designs_tiger.png',
-    name: 'Tiger'
+    name: 'Tiger',
+    traits: 'Powerful, Tough, Dynamic, Mighty',
+    bff: 'Pig',
+    nemesis: 'Monkey',
+    years: '',
+    element: '',
   },
   { 
     image: '/designs_rabbit.png',
-    name: 'Rabbit'
+    name: 'Rabbit',
+    traits: 'Gentle, Generous, Timid',
+    bff: 'Dog',
+    nemesis: 'Rooster',
+    years: '',
+    element: '',
   },
   { 
     image: '/designs_dragon.png',
-    name: 'Dragon'
+    name: 'Dragon',
+    traits: 'Mysterious, Imaginative, Ambitious',
+    bff: 'Rooster',
+    nemesis: 'Dog',
+    years: '',
+    element: '',
   },
   { 
     image: '/designs_snake.png',
-    name: 'Snake'
+    name: 'Snake',
+    traits: 'Wise, Humorous, Brilliant',
+    bff: 'Monkey',
+    nemesis: 'Pig',
+    years: '',
+    element: '',
   },
   { 
     image: '/designs_horse.png',
-    name: 'Horse'
+    name: 'Horse',
+    traits: 'Energetic, Passionate',
+    bff: 'Goat',
+    nemesis: 'Rat',
+    years: '',
+    element: '',
   },
   { 
     image: '/designs_goat.png',
-    name: 'Goat'
+    name: 'Goat',
+    traits: 'Meek, Loyal',
+    bff: 'Horse',
+    nemesis: 'Ox',
+    years: '',
+    element: '',
   },
   { 
     image: '/designs_monkey.png',
-    name: 'Monkey'
+    name: 'Monkey',
+    traits: 'Cautious, Clever, Energetic',
+    bff: 'Snake',
+    nemesis: 'Tiger',
+    years: '',
+    element: '',
   },
   { 
     image: '/designs_rooster.png',
-    name: 'Rooster'
+    name: 'Rooster',
+    traits: 'Ambitious, Meticulous, Independent',
+    bff: 'Dragon',
+    nemesis: 'Rabbit',
+    years: '',
+    element: '',
   },
   { 
     image: '/designs_dog.png',
-    name: 'Dog'
+    name: 'Dog',
+    traits: 'Loyal, Flexible, Gentle',
+    bff: 'Rabbit',
+    nemesis: 'Dragon',
+    years: '',
+    element: '',
   },
   { 
     image: '/designs_pig.png',
-    name: 'Pig'
+    name: 'Pig',
+    traits: 'Optimistic, Gluttonous, Sleepy',
+    bff: 'Tiger',
+    nemesis: 'Snake',
+    years: '',
+    element: '',
   }    
 ]

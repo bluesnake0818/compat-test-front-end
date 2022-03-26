@@ -33,12 +33,14 @@ const ImageSlider = ({ slides }) => {
               index === current && 
               (
                 <>
+                  <h1>Zodiac: {slide.name}</h1>
                   <img src={ slide.image } alt="zodiac image" className='image' />
-                  <>{slide.name}</>
+                  <p>Defining Traits: {  slide.traits }</p>
+                  <p>BFF: { slide.bff }</p>
+                  <p>Nemesis:  { slide.nemesis }</p>
                 </>
               )
             }
-            {/* {index === current && (<{slide.name} />} */}
           </div>
         ) 
       })}
