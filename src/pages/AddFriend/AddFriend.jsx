@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react"
+import './AddFriend.css'
 
 function AddFriend(props) {
   const formElement = useRef()
@@ -25,8 +26,8 @@ function AddFriend(props) {
 
 
 	return (
-		<>
-			<h1>Add Friend</h1>
+		<main>
+			<h3>Enter your friend's date of birth 🎂</h3>
 			<form autoComplete="off" ref={formElement} onSubmit={handleSubmit}>
 				<div className="form-group mb-3">
 					<label htmlFor="name-input" className="form-label">
@@ -62,11 +63,11 @@ function AddFriend(props) {
 						className="btn btn-primary btn-fluid"
             disabled={!validForm}
 					>
-						Add Friend
+						Next
 					</button>
 				</div>
 			</form>
-		</>
+		</main>
 	)
 }
 

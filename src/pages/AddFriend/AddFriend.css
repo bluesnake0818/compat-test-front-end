@@ -1,0 +1,21 @@
+main {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 1.6rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+button {
+  margin-top: 6rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
