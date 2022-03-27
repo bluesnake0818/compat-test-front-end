@@ -1,12 +1,12 @@
 import './CompatView.css'
-import { CompatData } from './CompatData';
 import React, {useState} from 'react'
 
-function CompatView() { 
+const CompatView = (props) => {
+  // const [current, setCurrent] = useState('rat')
 
   return(
     <>
-      Hello
+      {props.CompatData.rat.rat}
     </>
   )
 }
