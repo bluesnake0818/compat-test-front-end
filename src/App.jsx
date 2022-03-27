@@ -4,6 +4,7 @@ import './App.css'
 import * as friendService from './services/friends'
 import * as authService from './services/authService'
 import Compat from './pages/Compat/Compat'
+import ShowCompat from './pages/ShowCompat/ShowCompat'
 import AddFriend from './pages/AddFriend/AddFriend'
 import EditFriend from './pages/EditFriend/EditFriend'
 import NavBar from './components/NavBar/NavBar'
@@ -95,6 +96,16 @@ const App = () => {
             <Compat 
               handleDeleteFriend={handleDeleteFriend}
               friends={friends}
+              user={user}
+            />
+          }
+        />
+        <Route
+          path="/showCompat"
+          element={
+            <ShowCompat 
+              // handleDeleteFriend={handleDeleteFriend}
+              // friends={friends}
               user={user}
             />
           }
