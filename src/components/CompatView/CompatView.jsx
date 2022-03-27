@@ -7,7 +7,7 @@ const CompatView = (props) => {
   return(
     <>
       {compats.map(compat => 
-        <p key={compat.id}>{compat.zod_name}</p>
+        <p key={compat.id}>You are a {compat.zod_name}. Your compatibility with a rat is: {compat.rat}</p>
       )}
     </>
   )
