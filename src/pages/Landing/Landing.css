@@ -24,8 +24,8 @@ button {
   height: 5rem;
   /* background-color: transparent;
   color: #6661F1; */
-  background-color: #6661F1;
-  color: whitesmoke;
+  background-color: #6661F1 !important;
+  color: whitesmoke !important;
   font-weight: bold;
   font-size: 2rem;
   transition: none;
@@ -37,11 +37,11 @@ button {
 }
 
 button:hover {
-  background-color: white;
-  color:  #6661F1;
+  background-color: white !important;
+  color:  #6661F1 !important;
   
 }
 
 button:focus {
-  box-shadow: none;
+  box-shadow: none !important;
 }

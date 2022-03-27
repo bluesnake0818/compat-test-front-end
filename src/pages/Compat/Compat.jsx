@@ -5,20 +5,28 @@ import FriendCard from '../../components/FriendCard/FriendCard';
 const Compat = (props) => {
   return (
       <div className='main'>
-        <h3>Compatibility Tests</h3>
+        <h3>{props.user.name}'s compatibility test zone</h3>
         <Link to='/AddFriend'>
           <button className='button'>Add Friend</button>
         </Link>    
-        // friends.length and do ternary
-        // <p>You have no friends yet.</p> 
-        {props.friends.map(friend => (
-          <FriendCard
-            key={friend._id} 
-            friend={friend} 
-            handleDeleteFriend={props.handleDeleteFriend}
-            user={props.user}
-          />
-        ))}
+        <div className='friend-list'>
+          {props.friends.length ?
+              <ul>
+                  {props.friends.map(friend => (
+                    <li>
+                    <FriendCard
+                      key={friend._id} 
+                      friend={friend} 
+                      handleDeleteFriend={props.handleDeleteFriend}
+                      user={props.user}
+                    />
+                    </li>
+                  ))}   
+              </ul>
+          :
+          <p>You have no friends yet.</p> 
+        }
+        </div>
       </div>
   )
 }
