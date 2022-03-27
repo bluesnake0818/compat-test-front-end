@@ -32,6 +32,11 @@ const App = () => {
     navigate('/compat')
   }
 
+  const handleDeleteFriend = id => {
+    friendService.deleteOne(id)
+    .then(deletedFriend => setFriends(friends.filter(friend => friend._id !== deletedFriend._id)))
+  }
+
   const handleLogout = () => {
     authService.logout()
     setUser(null)
@@ -78,6 +83,7 @@ const App = () => {
             path="/compat"
             element={
               <Compat 
+                handleDeleteFriend={handleDeleteFriend}
                 friends={friends}
                 user={user}
               />

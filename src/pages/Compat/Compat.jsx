@@ -10,6 +10,7 @@ const Compat = (props) => {
           <FriendCard
             key={friend._id} 
             friend={friend} 
+            handleDeleteFriend={props.handleDeleteFriend}
             user={props.user}
           />
         ))}
