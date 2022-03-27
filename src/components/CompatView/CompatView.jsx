@@ -6,8 +6,8 @@ const CompatView = (props) => {
 
   return(
     <>
-      {compats.rat.map(compat => 
-          <p>{compat.tiger}</p>
+      {compats.map(compat => 
+        <p key={compat.id}>{compat.zod_name}</p>
       )}
     </>
   )
