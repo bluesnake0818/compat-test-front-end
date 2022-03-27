@@ -29,7 +29,7 @@ const App = () => {
   const handleAddFriend = async newFriendData => {
     const newFriend = await friendService.create(newFriendData)
     setFriends([...friends, newFriend])
-    navigate('/')
+    navigate('/compat')
   }
 
   const handleLogout = () => {
