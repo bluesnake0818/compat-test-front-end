@@ -43,7 +43,7 @@ const App = () => {
     .then(updatedFriend => {
       const newFriendsArray = friends.map(friend => friend._id === updatedFriend._id ? updatedFriend : friend)
       setFriends(newFriendsArray)
-      navigate('/')
+      navigate('/compat')
     })
   }
 

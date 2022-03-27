@@ -5,14 +5,14 @@ import './EditFriend.css'
 function EditFriend(props) {
   const location = useLocation()
   const [formData, setFormData] = useState(location.state.friend)
-  const [validForm, setValidForm] = useState(true)
+	const [validForm, setValidForm] = useState(true)
   const formElement = useRef()
 
-  const handleChange = evt => {
-    setFormData({...formData, [evt.target.name]: evt.target.value })
-  }
+	const handleChange = evt => {
+		setFormData({...formData, [evt.target.name]: evt.target.value })
+	}
 
-  useEffect(() => {
+	useEffect(() => {
 		formElement.current.checkValidity() ? setValidForm(true) : setValidForm(false)
 	}, [formData])
 
@@ -21,6 +21,7 @@ function EditFriend(props) {
 		const friendFormData = new FormData()
 		friendFormData.append('name', formData.name)
 		friendFormData.append('dob', formData.dob)
+		friendFormData.append('_id', formData._id) 
 		props.handleUpdateFriend(friendFormData)
 	}
 
