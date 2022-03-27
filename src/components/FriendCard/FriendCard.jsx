@@ -8,13 +8,14 @@ function FriendCard({friend, handleDeleteFriend, user}) {
         <h2 className="card-text">{friend.name} ({friend.dob})</h2>
       </div>
       <div className="card-footer">
-        <Link
-          className='btn btn-sm btn-warning'
-          to='/edit'
-          state={{friend}}
-        >
-          Edit
-        </Link>
+          <Link
+            to='/edit'
+            state={{friend}}
+          >
+            <button className='btn btn-sm btn-warning'>
+              Edit
+            </button>
+          </Link>
         <button
           className="btn btn-sm btn-danger m-left"
           onClick={()=> handleDeleteFriend(friend._id)}
