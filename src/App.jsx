@@ -5,6 +5,7 @@ import * as friendService from './services/friends'
 import * as authService from './services/authService'
 import Compat from './pages/Compat/Compat'
 import AddFriend from './pages/AddFriend/AddFriend'
+import EditFriend from './pages/EditFriend/EditFriend'
 import NavBar from './components/NavBar/NavBar'
 import Signup from './pages/Signup/Signup'
 import Login from './pages/Login/Login'
@@ -35,6 +36,15 @@ const App = () => {
   const handleDeleteFriend = id => {
     friendService.deleteOne(id)
     .then(deletedFriend => setFriends(friends.filter(friend => friend._id !== deletedFriend._id)))
+  }
+
+  const handleUpdateFriend = updatedFriendData => {
+    friendService.update(updatedFriendData)
+    .then(updatedFriend => {
+      const newFriendsArray = friends.map(friend => friend._id === updatedFriend._id ? updatedFriend : friend)
+      setFriends(newFriendsArray)
+      navigate('/')
+    })
   }
 
   const handleLogout = () => {
@@ -79,19 +89,27 @@ const App = () => {
           path="/changePassword"
           element={user ? <ChangePassword handleSignupOrLogin={handleSignupOrLogin}/> : <Navigate to="/login" />}
         />
-          <Route
-            path="/compat"
-            element={
-              <Compat 
-                handleDeleteFriend={handleDeleteFriend}
-                friends={friends}
-                user={user}
-              />
-            }
-          />
+        <Route
+          path="/compat"
+          element={
+            <Compat 
+              handleDeleteFriend={handleDeleteFriend}
+              friends={friends}
+              user={user}
+            />
+          }
+        />
         <Route
           path="/AddFriend"
           element={<AddFriend handleAddFriend={handleAddFriend} />}
+        />
+        <Route 
+          path='/edit'
+          element={
+            <EditFriend
+              handleUpdateFriend={handleUpdateFriend}
+            />
+          }
         />
       </Routes>
     </div>

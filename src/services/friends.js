@@ -32,8 +32,21 @@ function deleteOne(id) {
   .then(res => res.json())
 }
 
+function update(friend) {
+  return fetch(`${BASE_URL}/${friend.get('_id')}`, {
+    method: 'PUT',
+    headers: {
+      'Authorization': `Bearer ${tokenService.getToken()}`
+    },
+    body: friend
+  })
+  .then(res => res.json())
+}
+
+
 export {
   create,
   getAll,
   deleteOne,
+  update,
 }
