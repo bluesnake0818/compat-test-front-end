@@ -21,6 +21,7 @@ function AddFriend(props) {
     evt.preventDefault()
 		const friendFormData = new FormData()
     friendFormData.append('name', formData.name)
+		friendFormData.append('dob', formData.dob)
     props.handleAddFriend(friendFormData)
   }
 
