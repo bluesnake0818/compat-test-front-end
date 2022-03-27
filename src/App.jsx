@@ -1,5 +1,10 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
+import './App.css'
+import * as friendService from './services/friends'
+import * as authService from './services/authService'
+import Compat from './pages/Compat/Compat'
+import AddFriend from './pages/AddFriend/AddFriend'
 import NavBar from './components/NavBar/NavBar'
 import Signup from './pages/Signup/Signup'
 import Login from './pages/Login/Login'
@@ -8,14 +13,24 @@ import Profiles from './pages/Profiles/Profiles'
 import Zodiac from './pages/Zodiac/Zodiac'
 import SignupOrLogin from './pages/SignupOrLogin/SignupOrLogin'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
-import Compat from './pages/Compat/Compat'
-import AddFriend from './pages/AddFriend/AddFriend'
-import * as authService from './services/authService'
-import './App.css'
 
 const App = () => {
-  const [user, setUser] = useState(authService.getUser())
+  const [friends, setFriends] = useState([])
   const navigate = useNavigate()
+  const [user, setUser] = useState(authService.getUser())
+
+  useEffect(()=> {
+    if(user) {
+      friendService.getAll()
+      .then(allFriends => setFriends(allFriends))
+    }
+  }, [user])
+
+  const handleAddFriend = async newFriendData => {
+    const newFriend = await friendService.create(newFriendData)
+    setFriends([...friends, newFriend])
+    navigate('/')
+  }
 
   const handleLogout = () => {
     authService.logout()
@@ -59,13 +74,18 @@ const App = () => {
           path="/changePassword"
           element={user ? <ChangePassword handleSignupOrLogin={handleSignupOrLogin}/> : <Navigate to="/login" />}
         />
-        <Route
-          path="/compat"
-          element={<Compat />}
-        />
+          <Route
+            path="/compat"
+            element={
+              <Compat 
+                friends={friends}
+                user={user}
+              />
+            }
+          />
         <Route
           path="/AddFriend"
-          element={<AddFriend />}
+          element={<AddFriend handleAddFriend={handleAddFriend} />}
         />
       </Routes>
     </div>
