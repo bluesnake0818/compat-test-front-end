@@ -1,12 +1,13 @@
 import { useState, useRef, useEffect } from "react"
 import './AddFriend.css'
+import { BirthData } from '../../components/SignupForm/BirthData';
 
 function AddFriend(props) {
   const formElement = useRef()
   const [validForm, setValidForm] = useState(false)
   const [formData, setFormData] = useState({
     name: '',
-    dob: null,
+    birthYear: '',
   })
 
   useEffect(()=> {
@@ -21,7 +22,7 @@ function AddFriend(props) {
     evt.preventDefault()
 		const friendFormData = new FormData()
     friendFormData.append('name', formData.name)
-		friendFormData.append('dob', formData.dob)
+		friendFormData.append('birthYear', formData.birthYear)
     props.handleAddFriend(friendFormData)
   }
 
@@ -45,15 +46,15 @@ function AddFriend(props) {
 					/>
 				</div>
 				<div className="form-group mb-3">
-					<label htmlFor="dob-input" className="form-label">
-						Friend's Date of Birth (required)
+					<label htmlFor="birthYear-input" className="form-label">
+						Friend's Birth Year(required)
 					</label>
 					<input 
-						type="date"
+						type="text"
 						className="form-control"
-						id="dob-input"
-						name="dob"
-            value={formData.dob}
+						id="birthYear-input"
+						name="birthYear"
+            value={formData.birthYear}
             onChange={handleChange}
 						required
 					/>

@@ -7,7 +7,7 @@ function FriendCard({friend, handleDeleteFriend, user}) {
   return(
     <div className="card">
       <div className="card-body">
-        <h2 className="card-text">{friend.name} ({friend.dob})</h2>
+        <h2 className="card-text">{friend.name} ({friend.birthYear})</h2>
       </div>
       <div className="card-footer">
           <Link

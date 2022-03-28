@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react"
 import { Link, useLocation } from 'react-router-dom'
 import './EditFriend.css'
+import { BirthData } from '../../components/SignupForm/BirthData';
 
 function EditFriend(props) {
   const location = useLocation()
@@ -20,7 +21,7 @@ function EditFriend(props) {
 		evt.preventDefault()
 		const friendFormData = new FormData()
 		friendFormData.append('name', formData.name)
-		friendFormData.append('dob', formData.dob)
+		friendFormData.append('birthYear', formData.birthyear)
 		friendFormData.append('_id', formData._id) 
 		props.handleUpdateFriend(friendFormData)
 	}
@@ -44,15 +45,15 @@ function EditFriend(props) {
 					/>
 				</div>
         <div className="form-group mb-3">
-					<label htmlFor="dob-input" className="form-label">
-						Friend's Date of Birth (required)
+					<label htmlFor="birthYear-input" className="form-label">
+						Friend's Birth Year(required)
 					</label>
 					<input 
-						type="date"
+						type="text"
 						className="form-control"
-						id="dob-input"
-						name="dob"
-            value={formData.dob}
+						id="birthYear-input"
+						name="birthYear"
+            value={formData.birthYear}
             onChange={handleChange}
 						required
 					/>

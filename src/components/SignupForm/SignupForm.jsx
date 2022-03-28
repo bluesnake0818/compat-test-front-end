@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import styles from './SignupForm.module.css'
 import * as authService from '../../services/authService'
+import { BirthData } from './BirthData'
 
 const SignupForm = props => {
   const navigate = useNavigate()
@@ -10,7 +11,7 @@ const SignupForm = props => {
     email: '',
     password: '',
     passwordConf: '',
-    dob: null,
+    birthYear: '',
   })
 
   const handleChange = e => {
@@ -32,10 +33,10 @@ const SignupForm = props => {
     }
   }
 
-  const { name, email, password, passwordConf, dob } = formData
+  const { name, email, password, passwordConf, birthYear } = formData
 
   const isFormInvalid = () => {
-    return !(name && email && password && password === passwordConf && dob)
+    return !(name && email && password && password === passwordConf && birthYear)
   }
 
   return (
@@ -91,13 +92,13 @@ const SignupForm = props => {
         />
       </div>
       <div className={styles.inputContainer}>
-      <label htmlFor="password" className={styles.label}>Date of Birth</label>
+      <label htmlFor="password" className={styles.label}>Birth year</label>
         <input
-          type="date"
+          type="text"
           autoComplete="off"
-          id="dob"
-          value={dob}
-          name="dob"
+          id="birthYear"
+          value={birthYear}
+          name="birthYear"
           onChange={handleChange}
         />
       </div>
