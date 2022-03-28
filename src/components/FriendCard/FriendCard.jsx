@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import './FriendCard.css'
 
+
+
 function FriendCard({friend, handleDeleteFriend, user}) {
   return(
     <div className="card">
