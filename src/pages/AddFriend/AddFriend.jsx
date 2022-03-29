@@ -14,9 +14,6 @@ import LocationOnIcon from '@mui/icons-material/LocationOn'
 import EmailIcon from '@mui/icons-material/Email'
 import ListItemIcon from '@mui/material/ListItemIcon'
 
-const zodiacData = [
-	{'1980' : 'rat'}
-]
 
 function AddFriend(props) {
   const formElement = useRef()
