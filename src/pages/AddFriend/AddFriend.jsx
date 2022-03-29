@@ -127,10 +127,10 @@ function AddFriend(props) {
 		<main>
 			<h3>Enter your friend's date of birth 🎂</h3>
 			<Box
-			display="flex" 
-			justifyContent="center" 
-			alignItems="center"
-			sx={{ width: "50%", mt: '2rem' }}
+				display="flex" 
+				justifyContent="center" 
+				alignItems="center"
+				sx={{ width: "50%", mt: '5rem' }}
 			>
 				<Paper elevation={4} sx={{ width: "100%", p: "1rem" }}>
 					<form autoComplete="off" ref={formElement} onSubmit={handleSubmit}>

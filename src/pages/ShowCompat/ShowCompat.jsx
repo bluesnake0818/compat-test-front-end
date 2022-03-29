@@ -15,9 +15,9 @@ function ShowCompat({ user }) {
   const friend = location.state.friend
   const yourZod = friend.owner.zodiac
   const theirZod = friend.zodiac
-  const compatObj = compats.find(compat => compat.id === yourZod)
-  const compatArr = compatObj.compats
-  const compatFriend = compatArr.find(compatFr => compatFr.id === theirZod)
+  // const compatObj = compats.find(compat => compat.id === yourZod)
+  // const compatArr = compatObj.compats
+  // const compatFriend = compatArr.find(compatFr => compatFr.id === theirZod)
 
   return (
     <div className='showCompat'>
@@ -29,7 +29,7 @@ function ShowCompat({ user }) {
         {friend.name}'s zodiac is {theirZod}.  
       </div>
       <div> 
-        {compatFriend.compats}
+        {compats[yourZod][theirZod]}
       </div>
     </div>
   )
@@ -38,10 +38,10 @@ function ShowCompat({ user }) {
 export default ShowCompat;
 
 
-// <div>
-{/* {compats.`${yourZod}`.`${theirZod}`} */}
+{/* <div> */}
+  {/* {compatFriend.compats} */}
 {/* {compats.yourZod.theirZod} */}
-{/* </div> */}
+{/* </div>
 
 
 
