@@ -7,17 +7,22 @@ function FriendCard({friend, handleDeleteFriend, user}) {
   return(
     <div className="card">
       <div className="card-body">
-        <h2 className="card-text">{friend.name} ({friend.birthYear})</h2>
+        <Link
+          to='/showCompat'
+          state={{friend}}
+        >
+          <h2 className="card-text">{friend.name} {friend.birthYear} {friend.zodiac}</h2>
+        </Link>
       </div>
       <div className="card-footer">
-          <Link
-            to='/edit'
-            state={{friend}}
-          >
-            <button className='btn btn-sm btn-warning'>
-              Edit
-            </button>
-          </Link>
+        <Link
+          to='/edit'
+          state={{friend}}
+        >
+          <button className='btn btn-sm btn-warning'>
+            Edit
+          </button>
+        </Link>
         <button
           className="btn btn-sm btn-danger m-left"
           onClick={()=> handleDeleteFriend(friend._id)}
