@@ -1,14 +1,15 @@
 import { Link } from 'react-router-dom'
 import './FriendCard.css'
-
+import ShowCompat from '../../pages/ShowCompat/ShowCompat'
 
 
 function FriendCard({friend, handleDeleteFriend, user}) {
+  
   return(
     <div className="card">
       <div className="card-body">
         <Link
-          to='/showCompat'
+          to='/showCompat' 
           state={{friend}}
         >
           <h2 className="card-text">{friend.name} {friend.birthYear} {friend.zodiac}</h2>

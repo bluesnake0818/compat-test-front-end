@@ -106,7 +106,7 @@ const App = () => {
           element={
             <ShowCompat 
               // handleDeleteFriend={handleDeleteFriend}
-              // friends={friends}
+              friends={friends}
               user={user}
             />
           }
