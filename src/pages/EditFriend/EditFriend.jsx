@@ -1,13 +1,16 @@
 import { useState, useRef, useEffect } from "react"
 import { Link, useLocation } from 'react-router-dom'
 import './EditFriend.css'
-import { BirthData } from '../../components/SignupForm/BirthData';
 
 function EditFriend(props) {
   const location = useLocation()
   const [formData, setFormData] = useState(location.state.friend)
 	const [validForm, setValidForm] = useState(true)
   const formElement = useRef()
+
+	useEffect(() => {
+		formElement.current.checkValidity() ? setValidForm(true) : setValidForm(false)
+	}, [formData])
 
   const handleChange = evt => {
 		if(evt.target.name === 'birthYear'){
@@ -91,17 +94,14 @@ function EditFriend(props) {
 		}
   }
 
-	useEffect(() => {
-		formElement.current.checkValidity() ? setValidForm(true) : setValidForm(false)
-	}, [formData])
 
 	const handleSubmit = evt => {
 		evt.preventDefault()
 		const friendFormData = new FormData()
-		friendFormData.append('name', formData.name)
-		friendFormData.append('birthYear', formData.birthyear)
-		friendFormData.append('zodiac', formData.zodiac)
 		friendFormData.append('_id', formData._id) 
+		friendFormData.append('name', formData.name)
+		friendFormData.append('birthYear', formData.birthYear)
+		friendFormData.append('zodiac', formData.zodiac)
 		props.handleUpdateFriend(friendFormData)
 	}
 
@@ -150,7 +150,7 @@ function EditFriend(props) {
             onChange={handleChange}
 						required
 					>
-						<option value="1980" >1980</option>
+						<option value="1980">1980</option>
 						<option value="1981">1981</option>
 						<option value="1982">1982</option>
 						<option value="1983">1983</option>

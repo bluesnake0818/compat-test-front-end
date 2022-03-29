@@ -40,7 +40,7 @@ const App = () => {
     .then(deletedFriend => setFriends(friends.filter(friend => friend._id !== deletedFriend._id)))
   }
 
-  const handleUpdateFriend = updatedFriendData => {
+  const handleUpdateFriend =  updatedFriendData => {
     friendService.update(updatedFriendData)
     .then(updatedFriend => {
       const newFriendsArray = friends.map(friend => friend._id === updatedFriend._id ? updatedFriend : friend)
