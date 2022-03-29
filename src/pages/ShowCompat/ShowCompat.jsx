@@ -23,10 +23,10 @@ function ShowCompat({ user }) {
     <div className='showCompat'>
       {/* <CompatView CompatData = {CompatData} /> */}
       <div>
-        {friend.name}'s zodiac is {theirZod}.  
+        {friend.owner.name}'s zodiac is {yourZod}.
       </div>
       <div>
-        {friend.owner.name}'s zodiac is {yourZod}.
+        {friend.name}'s zodiac is {theirZod}.  
       </div>
       <div> 
         {compatFriend.compats}
