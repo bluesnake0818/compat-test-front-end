@@ -11,6 +11,8 @@ import ListItemIcon from '@mui/material/ListItemIcon'
 import PersonIcon from '@mui/icons-material/Person'
 import CakeIcon from '@mui/icons-material/Cake'
 import PetsIcon from '@mui/icons-material/Pets'
+import { Button } from '@mui/material'
+import ListItemButton from '@mui/material/ListItemButton';
 
 
 function FriendCard({friend, handleDeleteFriend, user}) {
@@ -31,7 +33,7 @@ function FriendCard({friend, handleDeleteFriend, user}) {
                 to='/showCompat' 
                 state={{friend}}
               >
-                <ListItemText primary={friend.name} secondary="Name"/>
+                <ListItemText primary="Name" secondary={friend.name}/>
               </Link>
           </ListItem>
           <Divider />
@@ -39,20 +41,37 @@ function FriendCard({friend, handleDeleteFriend, user}) {
             <ListItemIcon>
               <CakeIcon />
             </ListItemIcon>
-            <ListItemText primary={friend.birthYear} secondary="Birth Year" />
+            <ListItemText primary="Birth Year" secondary={friend.birthYear}/>
           </ListItem>
           <Divider />
           <ListItem>
             <ListItemIcon>
               <PetsIcon />
             </ListItemIcon>
-            <ListItemText primary={friend.zodiac} secondary="Zodiac" />
+            <ListItemText primary="Zodiac" secondary={friend.zodiac} />
+          </ListItem>
+          <Divider />
+          <ListItem>
+            <ListItemIcon>
+              <CakeIcon />
+            </ListItemIcon>
+            <Link
+              to='/edit'
+              state={{friend}}
+            >
+              <ListItemButton>
+                Edit
+              </ListItemButton>
+            </Link>
+              <ListItemButton onClick={()=> handleDeleteFriend(friend._id)}>
+                Delete
+              </ListItemButton>
           </ListItem>
         </List>
       </Paper>
     </Box>
   );
-
+  
 }
 
 export default FriendCard
