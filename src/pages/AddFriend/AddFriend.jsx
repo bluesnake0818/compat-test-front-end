@@ -1,6 +1,22 @@
 import { useState, useRef, useEffect } from "react"
 import './AddFriend.css'
 import { BirthData } from '../../components/SignupForm/BirthData';
+import Box from '@mui/material/Box'
+import Button from '@mui/material/Button'
+import Paper from '@mui/material/Paper'
+import TextField from '@mui/material/TextField'
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
+import ListItemText from '@mui/material/ListItemText'
+import Divider from '@mui/material/Divider'
+import PersonIcon from '@mui/icons-material/Person'
+import LocationOnIcon from '@mui/icons-material/LocationOn'
+import EmailIcon from '@mui/icons-material/Email'
+import ListItemIcon from '@mui/material/ListItemIcon'
+
+const zodiacData = [
+	{'1980' : 'rat'}
+]
 
 function AddFriend(props) {
   const formElement = useRef()
@@ -8,22 +24,53 @@ function AddFriend(props) {
   const [formData, setFormData] = useState({
     name: '',
     birthYear: '',
+		zodiac: '',
   })
 
   useEffect(()=> {
     formElement.current.checkValidity() ? setValidForm(true) : setValidForm(false)
   }, [formData])
 
+
+
+	// if event.target.name 
+	// use % of 12 
   const handleChange = evt => {
-    setFormData({...formData, [evt.target.name]: evt.target.value})
+		if(evt.target.name === 'birthYear'){
+			setFormData({...formData, 
+				zodiac: 'rat',
+				birthYear: evt.target.value
+			})
+		} else if(evt.target.name === 'name'){
+			setFormData({...formData, 
+				name: evt.target.value
+			})
+		}
   }
 
+  // const handleChange = evt => {
+	// 	setFormData({...formData, 
+	// 		[evt.target.name]: evt.target.value
+	// 	})
+
+		// setFormData({...formData, 
+		// 	zodiac: 'rat'
+		// })
+
+	// }
+  
+
+
+
+
+
   const handleSubmit = evt => {
-    evt.preventDefault()
+		evt.preventDefault()
 		const friendFormData = new FormData()
     friendFormData.append('name', formData.name)
 		friendFormData.append('birthYear', formData.birthYear)
-    props.handleAddFriend(friendFormData)
+		friendFormData.append('zodiac', formData.birthYear)
+    props.handleAddFriend(friendFormData)		
   }
 
 
@@ -46,6 +93,20 @@ function AddFriend(props) {
 					/>
 				</div>
 				<div className="form-group mb-3">
+					<label htmlFor="zodiac-input" className="form-label">
+						Friend's Zodiac (required)
+					</label>
+					<input 
+						type="text"
+						className="form-control"
+						id="zodiac-input"
+						name="zodiac"
+            value={formData.zodiac}
+            onChange={handleChange}
+						required
+					/>
+				</div>
+				<div className="form-group mb-3">
 					<label htmlFor="birthYear-input" className="form-label">
 						Friend's Birth Year(required)
 					</label>
@@ -58,7 +119,7 @@ function AddFriend(props) {
             onChange={handleChange}
 						required
 					>
-						<option value="1980">1980</option>
+						<option value="1980" >1980</option>
 						<option value="1981">1981</option>
 						<option value="1982">1982</option>
 						<option value="1983">1983</option>
@@ -116,11 +177,3 @@ function AddFriend(props) {
 }
 
 export default AddFriend
-
-{/* <label for="mpaa-rating-select">MPAA Rating</label>
-<select name="mpaaRating" id="mpaa-rating-select">
-	<option value="G">G</option>
-	<option value="PG">PG</option>
-	<option value="PG-13">PG-13</option>
-	<option value="R">R</option>
-</select> */}

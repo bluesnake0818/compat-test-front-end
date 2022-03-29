@@ -16,6 +16,7 @@ import Zodiac from './pages/Zodiac/Zodiac'
 import SignupOrLogin from './pages/SignupOrLogin/SignupOrLogin'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 
+
 const App = () => {
   const [friends, setFriends] = useState([])
   const navigate = useNavigate()
