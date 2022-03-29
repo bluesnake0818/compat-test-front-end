@@ -5,3 +5,12 @@
   justify-content: center;
   align-items: center;
 }
+
+/* a {
+  color: #000000 !important;
+} */
+
+ul {
+  width: 40vw;
+  padding-left: 0;
+}
