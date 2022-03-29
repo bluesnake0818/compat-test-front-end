@@ -28,10 +28,6 @@ function AddFriend(props) {
     formElement.current.checkValidity() ? setValidForm(true) : setValidForm(false)
   }, [formData])
 
-
-
-	// if event.target.name 
-	// use % of 12 
   const handleChange = evt => {
 		if(evt.target.name === 'birthYear'){
 			const numBirthYear = parseInt(evt.target.value)
@@ -115,16 +111,12 @@ function AddFriend(props) {
   }
 
 
-
-
-
-
   const handleSubmit = evt => {
 		evt.preventDefault()
 		const friendFormData = new FormData()
     friendFormData.append('name', formData.name)
 		friendFormData.append('birthYear', formData.birthYear)
-		friendFormData.append('zodiac', formData.birthYear)
+		friendFormData.append('zodiac', formData.zodiac)
     props.handleAddFriend(friendFormData)		
   }
 
