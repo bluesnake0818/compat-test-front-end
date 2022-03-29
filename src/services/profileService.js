@@ -9,4 +9,14 @@ async function getAllProfiles() {
   return await res.json()
 }
 
-export { getAllProfiles }
+// async function getProfile(_id) {
+//   const res = await fetch(`BASE_URL/${toString(_id)}`, {
+//     headers: { Authorization: `Bearer ${tokenService.getToken()}` },
+//   })
+//   return await res.json()
+// }
+
+export { 
+  getAllProfiles, 
+  // getProfile,
+}
