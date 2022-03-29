@@ -37,10 +37,79 @@ function AddFriend(props) {
 	// use % of 12 
   const handleChange = evt => {
 		if(evt.target.name === 'birthYear'){
-			setFormData({...formData, 
-				zodiac: 'rat',
-				birthYear: evt.target.value
-			})
+			const numBirthYear = parseInt(evt.target.value)
+			if(numBirthYear%12 === 0) {
+				setFormData({...formData, 
+					zodiac: 'monkey',
+					birthYear: evt.target.value
+				})
+			}
+			if(numBirthYear%12 === 1) {
+				setFormData({...formData, 
+					zodiac: 'rooster',
+					birthYear: evt.target.value
+				})
+			}
+			if(numBirthYear%12 === 2) {
+				setFormData({...formData, 
+					zodiac: 'dog',
+					birthYear: evt.target.value
+				})
+			}
+			if(numBirthYear%12 === 3) {
+				setFormData({...formData, 
+					zodiac: 'pig',
+					birthYear: evt.target.value
+				})
+			}
+			if(numBirthYear%12 === 4) {
+				setFormData({...formData, 
+					zodiac: 'rat',
+					birthYear: evt.target.value
+				})
+			}
+			if(numBirthYear%12 === 5) {
+				setFormData({...formData, 
+					zodiac: 'ox',
+					birthYear: evt.target.value
+				})
+			}
+			if(numBirthYear%12 === 6) {
+				setFormData({...formData, 
+					zodiac: 'tiger',
+					birthYear: evt.target.value
+				})
+			}
+			if(numBirthYear%12 === 7) {
+				setFormData({...formData, 
+					zodiac: 'rabbit',
+					birthYear: evt.target.value
+				})
+			}
+			if(numBirthYear%12 === 8) {
+				setFormData({...formData, 
+					zodiac: 'dragon',
+					birthYear: evt.target.value
+				})
+			}
+			if(numBirthYear%12 === 9) {
+				setFormData({...formData, 
+					zodiac: 'snake',
+					birthYear: evt.target.value
+				})
+			}
+			if(numBirthYear%12 === 10) {
+				setFormData({...formData, 
+					zodiac: 'horse',
+					birthYear: evt.target.value
+				})
+			}
+			if(numBirthYear%12 === 11) {
+				setFormData({...formData, 
+					zodiac: 'goat',
+					birthYear: evt.target.value
+				})
+			}
 		} else if(evt.target.name === 'name'){
 			setFormData({...formData, 
 				name: evt.target.value
@@ -48,17 +117,6 @@ function AddFriend(props) {
 		}
   }
 
-  // const handleChange = evt => {
-	// 	setFormData({...formData, 
-	// 		[evt.target.name]: evt.target.value
-	// 	})
-
-		// setFormData({...formData, 
-		// 	zodiac: 'rat'
-		// })
-
-	// }
-  
 
 
 
