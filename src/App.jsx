@@ -4,6 +4,7 @@ import './App.css'
 import * as friendService from './services/friends'
 import * as authService from './services/authService'
 import Compat from './pages/Compat/Compat'
+import Profile from './pages/Profile/Profile'
 import ShowCompat from './pages/ShowCompat/ShowCompat'
 import AddFriend from './pages/AddFriend/AddFriend'
 import EditFriend from './pages/EditFriend/EditFriend'
@@ -120,6 +121,15 @@ const App = () => {
           element={
             <EditFriend
               handleUpdateFriend={handleUpdateFriend}
+            />
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            <Profile 
+              friends={friends}
+              user={user}
             />
           }
         />
