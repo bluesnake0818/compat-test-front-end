@@ -17,13 +17,15 @@
 } */
 
 .card {
-  /* background-color: whitesmoke; */
-  border-color: #6661f1;
+  background-color: whitesmoke;
+  color: #000000DE;
+  /* border-color: #6661f1; */
   border-radius: 1rem;
   border-style:solid;
   padding: 1rem;
+  width: 30rem;
+  height: 20rem;
 }
-
 
 
 .button-area {
@@ -60,7 +62,7 @@
 }
 
 .compat-link {
-  
+  color: #000000DE
 }
 
 .compat-link:hover {
