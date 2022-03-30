@@ -1,5 +1,3 @@
-
-
 import { ProfileData } from './ProfileData';
 
 const Profile = (props) => {
