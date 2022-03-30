@@ -3,6 +3,7 @@ import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
 import './App.css'
 import * as friendService from './services/friends'
 import * as authService from './services/authService'
+import * as profileService from './services/profileService'
 import Compat from './pages/Compat/Compat'
 import Profile from './pages/Profile/Profile'
 import ShowCompat from './pages/ShowCompat/ShowCompat'
@@ -18,10 +19,22 @@ import SignupOrLogin from './pages/SignupOrLogin/SignupOrLogin'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 
 
+
 const App = () => {
   const [friends, setFriends] = useState([])
   const navigate = useNavigate()
   const [user, setUser] = useState(authService.getUser())
+  const [profile, setProfile] = useState({
+    name: ''
+    }
+  )
+
+  useEffect(()=> {
+    profileService.getAllProfiles()
+    .then(profiles => {
+      setProfile(profiles.find(profile => profile._id === user.profile))
+  })
+  }, [])
 
   useEffect(()=> {
     if(user) {
@@ -59,7 +72,7 @@ const App = () => {
   const handleSignupOrLogin = () => {
     setUser(authService.getUser())
   }
-
+  
   return (
     <div className='mainBody'>
       <NavBar user={user} handleLogout={handleLogout} />
@@ -130,6 +143,7 @@ const App = () => {
             <Profile 
               friends={friends}
               user={user}
+              profile={profile}
             />
           }
         />

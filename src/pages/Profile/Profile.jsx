@@ -1,84 +1,67 @@
-import { ProfileData } from './ProfileData';
+import { ZodiacData } from './ZodiacData';
 import { useState, useEffect } from 'react'
-import * as profileService from '../../services/profileService'
 
 const Profile = (props) => {
-  // const [profiles, setProfiles] = useState([])
-  const [profile, setProfile] = useState({
-    name: ''
-    }
+
+  const [zodiacs, setZodiacs] = useState(ZodiacData)
+  const [zodiacObj, setZodiacObj] = useState(
+   {} 
   )
 
-  // const [zodiac, setZodiac] = useState({
-  //   id: ''
-  //   }
-  // )
 
-  useEffect(()=> {
-    profileService.getAllProfiles()
-    .then(profiles =>
-      setProfile(profiles.find(profile => profile.id === props.user.profile.id))
-    )
-    
-  }, [])
 
-  // useEffect(() => {
-  //   ProfileData.find(zodiac => zodiac.id === profile.zodiac)
-  //   .then(zodiac => setZodiac(zodiac))
-  // }, [])
+  console.log(props.profile.zodiac)
 
-  // useEffect(()=> {
-  //   profiles.find(profile => profile.id === props.user.profile.id)
-  //   .then(profile => setProfile(profile))
-  // }, [])
+  console.log(zodiacObj)
+  
+  
+  useEffect(() => {
+    if (props.profile.zodiac)
+      {setZodiacObj(zodiacs.find(zodiacObj => zodiacObj.id === props.profile.zodiac))}
+    },[props.profile.zodiac])
 
-  // useEffect(()=> {
-  //   setProfile(profiles.find(profile => profile.id === props.user.profile.id))
-  // }, [])
 
-  // const userProfile = profiles.find(profile => profile.id === props.user.profile.id)
-  // console.log(userProfile.name)
+  
 
-  // console.log(zodiac)
 
   return (
     <div className='main'>
-      <h3>{props.user.name}, your zodiac {profile.zodiac}.</h3>
+      {/* <h3>{props.user.name}, your zodiac {yourZod}.</h3> */}
       <div className="card">
           <ul>
             <li>
               {/* <img src="././designs_rabbit.png" alt="" /> */}
             </li>
             <li>
-              Archetype: {ProfileData[3].archetype}
+              Archetype: {zodiacObj.archetype}
             </li>
           </ul>
       </div>
       <div className="card">
         <ul>
           <li>
-            Description: {ProfileData[3].desc}
+            Description: {zodiacObj.desc}
           </li>
         </ul>
       </div>
       <div className="card">
         <ul>  
-          <li>{ProfileData[3].celeb1.name}</li>
-          <li>{ProfileData[3].celeb2.name}</li>
-          <li>{ProfileData[3].celeb3.name}</li>
+          {/* <li>{ZodiacData[profile.zodiac].celeb1.name}</li>
+          <li>{ZodiacData[profile.zodiac].celeb2.name}</li>
+          <li>{ZodiacData[profile.zodiac].celeb3.name}</li> */}
         </ul>
       </div>
       <div className="card">
         <ul>  
           <li>
-            Most Compatible: {ProfileData[3].bff}
+            {/* Most Compatible: {ZodiacData[profile.zodiac].bff} */}
           </li>
         </ul>
       </div>
       <div className="card">
         <ul>  
           <li>
-            Worst Enemy: {ProfileData[3].nemesis}
+            {/* Worst Enemy: {ZodiacData[profile.zodiac].nemesis} */}
           </li>
         </ul>
       </div>
@@ -91,7 +74,7 @@ const Profile = (props) => {
 
 export default Profile;
 
-// {ProfileData.find(zodiac => zodiac.id === profile.id 
+// {ZodiacData.find(zodiac => zodiac.id === profile.id 
 //   .then (return (
 //     <img src={ zodiac.image } alt="zodiac image" className='image' />
 //     {<div className='zodiac-desc'>
