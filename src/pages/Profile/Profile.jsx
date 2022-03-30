@@ -7,12 +7,10 @@ const Profile = (props) => {
   const [zodiacObj, setZodiacObj] = useState(
    {} 
   )
+  
 
 
 
-  console.log(props.profile.zodiac)
-
-  console.log(zodiacObj)
   
   
   useEffect(() => {
@@ -20,13 +18,14 @@ const Profile = (props) => {
       {setZodiacObj(zodiacs.find(zodiacObj => zodiacObj.id === props.profile.zodiac))}
     },[props.profile.zodiac])
 
+  const yourZod = props.profile.zodiac
 
   
 
 
   return (
     <div className='main'>
-      {/* <h3>{props.user.name}, your zodiac {yourZod}.</h3> */}
+      <h3>{props.user.name}, your zodiac {props.profile.zodiac}.</h3>
       <div className="card">
           <ul>
             <li>
@@ -46,22 +45,22 @@ const Profile = (props) => {
       </div>
       <div className="card">
         <ul>  
-          {/* <li>{ZodiacData[profile.zodiac].celeb1.name}</li>
-          <li>{ZodiacData[profile.zodiac].celeb2.name}</li>
-          <li>{ZodiacData[profile.zodiac].celeb3.name}</li> */}
+          <li>{zodiacObj.celeb1}</li>
+          <li>{zodiacObj.celeb2}</li>
+          <li>{zodiacObj.celeb3}</li>
         </ul>
       </div>
       <div className="card">
         <ul>  
           <li>
-            {/* Most Compatible: {ZodiacData[profile.zodiac].bff} */}
+            Most Compatible: {zodiacObj.bff}
           </li>
         </ul>
       </div>
       <div className="card">
         <ul>  
           <li>
-            {/* Worst Enemy: {ZodiacData[profile.zodiac].nemesis} */}
+            Worst Enemy: {zodiacObj.nemesis}
           </li>
         </ul>
       </div>
