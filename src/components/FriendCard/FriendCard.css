@@ -16,6 +16,14 @@
   color: #FF6969 !important;
 } */
 
+.card {
+  /* background-color: whitesmoke; */
+  border-color: #6661f1;
+  border-radius: 1rem;
+  border-style:solid;
+  padding: 1rem;
+}
+
 .button-area {
   display: flex;
   justify-content: space-around;
@@ -27,6 +35,8 @@
 
 .edit-button {
   width: 10rem;
+  font-size: 1.4rem;
+  height: 3rem;
   color: #FFC83D !important;
   border-color: #FFC83D;
   text-align: center;
@@ -34,12 +44,28 @@
 }
 
 .delete-button {
-  width: 10rem !important;
+  width: 10rem;
+  height: 3rem;
+  font-size: 1.4rem;
   color: #FF6969 !important;
   border-color: #FF6969 ;  
   background-color: transparent !important;
+  margin: 0 !important;
 }
 
 .friend-name {
   color: #000000DE;
+}
+
+.compat-link {
+  
+}
+
+.compat-link:hover {
+  color:#6661f1;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-around;
 }

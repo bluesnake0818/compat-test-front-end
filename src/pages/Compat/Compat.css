@@ -6,6 +6,10 @@
   align-items: center;
 }
 
+.friend-list {
+  border-color: #6661f1;
+}
+
 /* a {
   color: #000000 !important;
 } */
@@ -13,5 +17,9 @@
 ul {
   width: 40vw;
   padding-left: 0;
+}
+
+li {
+  border-color: #6661f1;
 }
 
