@@ -1,5 +1,6 @@
 import { ProfileData } from './ProfileData';
 
+
 const Profile = (props) => {
   return (
       <div className='main'>

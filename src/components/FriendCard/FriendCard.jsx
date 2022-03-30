@@ -17,13 +17,14 @@ import ListItemButton from '@mui/material/ListItemButton';
 
 function FriendCard({friend, handleDeleteFriend, user}) {
   return ( 
+    <>
     <Box
     display="flex" 
     justifyContent="center" 
     alignItems="center"
-    sx={{ width: "100%" }}
+    sx={{ width: "80%" }}
     >
-      <Paper sx={{ width: '100%' }}>
+      <Paper sx={{ width: '80%' }}>
         <List>
           <ListItem>
             <ListItemIcon>
@@ -33,7 +34,7 @@ function FriendCard({friend, handleDeleteFriend, user}) {
                 to='/showCompat' 
                 state={{friend}}
               >
-                <ListItemText primary="Name" secondary={friend.name}/>
+                <ListItemText className='friend-name' primary="Name" secondary={friend.name}/>
               </Link>
           </ListItem>
           <Divider />
@@ -51,25 +52,24 @@ function FriendCard({friend, handleDeleteFriend, user}) {
             <ListItemText primary="Zodiac" secondary={friend.zodiac} />
           </ListItem>
           <Divider />
-          <ListItem>
-            <ListItemIcon>
-              <CakeIcon />
-            </ListItemIcon>
-            <Link
-              to='/edit'
-              state={{friend}}
-            >
-              <ListItemButton>
-                Edit
-              </ListItemButton>
-            </Link>
-              <ListItemButton onClick={()=> handleDeleteFriend(friend._id)}>
-                Delete
-              </ListItemButton>
-          </ListItem>
         </List>
       </Paper>
     </Box>
+        <div className='button-area'>
+          <Link 
+            className='edit-link'
+            to='/edit'
+            state={{friend}}
+          >
+            <button className='edit-button' >
+              Edit
+            </button>
+          </Link>
+            <button className='delete-button' onClick={()=> handleDeleteFriend(friend._id)}>
+              Delete
+            </button>
+        </div>
+    </>
   );
   
 }

@@ -1,7 +1,45 @@
-.card-text {
-  /* color: #272727; */
-}
+/* .card-text {
+  color: #272727;
+} */
 
 /* a {
-  color: #000000 important;
+  color: #FFC83D !important;
 } */
+
+/* li.MuiListItem-root {
+  display: flex;
+  justify-content: center;
+} */
+
+/* .MuiListItemButton-root {
+  width: 5rem;
+  color: #FF6969 !important;
+} */
+
+.button-area {
+  display: flex;
+  justify-content: space-around;
+}
+
+.edit-link {
+  font-size: 1.4rem;
+}
+
+.edit-button {
+  width: 10rem;
+  color: #FFC83D !important;
+  border-color: #FFC83D;
+  text-align: center;
+  background-color: transparent !important;
+}
+
+.delete-button {
+  width: 10rem !important;
+  color: #FF6969 !important;
+  border-color: #FF6969 ;  
+  background-color: transparent !important;
+}
+
+.friend-name {
+  color: #000000DE;
+}

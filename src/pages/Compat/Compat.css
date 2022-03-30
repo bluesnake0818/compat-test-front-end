@@ -1,5 +1,5 @@
 .main {
-  padding-left: 2rem;
+  /* padding-left: 2rem; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,9 +13,5 @@
 ul {
   width: 40vw;
   padding-left: 0;
-  
 }
 
-li {
-  
-}
