@@ -199,7 +199,7 @@ const SignupForm = props => {
 							fullWidth
 							required
 							type="text"
-							name="birthYerar"
+							name="birthYear"
 							label="Birth Year"
 							value={birthYear}
 							onChange={handleChange}
@@ -216,11 +216,22 @@ const SignupForm = props => {
 							value={zodiac}
 							onChange={handleChange}
 						/>
-            <Button disabled={isFormInvalid()} className={styles.button}>
+            <Button 
+							type="submit"
+							disabled={isFormInvalid()} 
+							variant="contained"
+							fullWidth
+							className={styles.button}>
                   Sign Up
             </Button>
             <Link to="/" className={styles.link}>
-              <Button className={styles.button}>Cancel</Button>
+              <Button 
+								variant="contained"
+								fullWidth
+								className={styles.button}
+							>
+								Cancel
+							</Button>
             </Link>
           </form>
         </Paper>
