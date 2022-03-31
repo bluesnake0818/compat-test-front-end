@@ -25,7 +25,7 @@ const LoginForm = props => {
     try {
       await authService.login(formData)
       props.handleSignupOrLogin()
-      navigate('/compat')
+      navigate('/PremiumContent')
     } catch (err) {
       props.updateMessage(err.message)
     }

@@ -1,0 +1,23 @@
+.container {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+}
+
+.links {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.instructions {
+  font-size: 1rem;
+}

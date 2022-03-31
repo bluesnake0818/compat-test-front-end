@@ -11,6 +11,7 @@ import SignupOrLogin from './pages/SignupOrLogin/SignupOrLogin'
 import Signup from './pages/Signup/Signup'
 import Login from './pages/Login/Login'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
+import PremiumContent from './pages/PremiumContent/PremiumContent'
 import Profiles from './pages/Profiles/Profiles'
 import Profile from './pages/Profile/Profile'
 import Compat from './pages/Compat/Compat'
@@ -100,6 +101,16 @@ const App = () => {
         <Route
           path="/changePassword"
           element={user ? <ChangePassword handleSignupOrLogin={handleSignupOrLogin}/> : <Navigate to="/login" />}
+        />
+        <Route
+          path="/PremiumContent"
+          element={
+            user ?
+            <PremiumContent 
+              user={user}
+            />
+            : <Navigate to="/signupOrLogin"  />
+          }
         />
         <Route
           path="/compat"
