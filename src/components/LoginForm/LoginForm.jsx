@@ -33,7 +33,6 @@ const LoginForm = props => {
 
   return (
     <main className={styles.container}>
-      <h3 className={styles.title}>Log In.</h3>
       <Box
 				display="flex" 
 				justifyContent="center" 
@@ -78,10 +77,10 @@ const LoginForm = props => {
 						>
 							Log In
 						</Button>
-            <Link to="/">
+            <Link to="/" className={styles.link}>
               <Button 
                 variant="contained"
-							  fullWidth
+                fullWidth
                 className={styles.button}
               > 
                 Cancel
