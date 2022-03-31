@@ -1,7 +1,7 @@
 import styles from './ImageSlider.module.css'
 import React, {useState} from 'react'
 import { SliderData } from './SliderData';
-// import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'
+import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'
 
 const ImageSlider = () => {
   const [current, setCurrent] = useState(0)
@@ -24,8 +24,8 @@ const ImageSlider = () => {
 // revive the opacity for active slides (transition)
   return (
       <section className={styles.slider}>
-        {/* <FaArrowAltCircleLeft className={styles.leftArrow} onClick={prevSlide} />
-        <FaArrowAltCircleRight className={styles.rightArrow} onClick={nextSlide} /> */}
+        <FaArrowAltCircleLeft className={styles.leftArrow} onClick={prevSlide} />
+        <FaArrowAltCircleRight className={styles.rightArrow} onClick={nextSlide} />
         {SliderData.map((slide, index) => {
           return (
             <div className={index === current ? 'slide active' : 'slide'} key={index}>
