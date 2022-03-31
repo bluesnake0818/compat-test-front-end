@@ -96,10 +96,10 @@ const App = () => {
           path="/login"
           element={<Login handleSignupOrLogin={handleSignupOrLogin} />}
         />
-        <Route
+        {/* <Route
           path="/profiles"
           element={user ? <Profiles /> : <Navigate to="/login" />}
-        />
+        /> */}
         <Route
           path="/changePassword"
           element={user ? <ChangePassword handleSignupOrLogin={handleSignupOrLogin}/> : <Navigate to="/login" />}
@@ -138,12 +138,14 @@ const App = () => {
         />
         <Route
           path="/profile"
-          element={
+          element={user ?
             <Profile 
               friends={friends}
               user={user}
               profile={profile}
             />
+            : 
+            <Navigate to="/login" />
           }
         />
       </Routes>
