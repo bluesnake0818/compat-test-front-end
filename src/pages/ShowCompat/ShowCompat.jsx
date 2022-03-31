@@ -1,8 +1,7 @@
 import { useState, useRef, useEffect } from "react"
 import { Link, useLocation } from 'react-router-dom'
 import styles from './ShowCompat.module.css'
-import CompatView from '../../components/CompatView/CompatView';
-import { CompatData } from '../../components/CompatView/CompatData';
+import { CompatData } from './CompatData';
 import reactDom from "react-dom";
 import React from "react";
 
@@ -17,6 +16,7 @@ function ShowCompat({ user }) {
 
   return (
     <main className={styles.container}>
+      <h3>{friend.owner.name} & {friend.name}'s Compat</h3>
       <div className={styles.card}>
         <div className="card-body">
           <ul className={styles.list}>
