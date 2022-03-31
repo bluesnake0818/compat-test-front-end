@@ -16,21 +16,24 @@ const Compat = (props) => {
           <button className={styles.button}>Add Friend</button>
         </Link>    
         {props.friends.length ?
-            <ul className={styles.list}>
-                {props.friends.map((friend, index) => 
-                  <li key={index} className={styles.listItem}>
-                    <FriendCard
-                      key={friend._id} 
-                      friend={friend} 
-                      handleDeleteFriend={props.handleDeleteFriend}
-                      user={props.user}
-                    />
-                  </li>
-                  )
-                }   
-            </ul>
+          <ul className={styles.list}>
+            {props.friends.map((friend, index) => 
+              (friend.owner._id === props.user.profile) ?
+                <li key={index} className={styles.listItem}>
+                  <FriendCard
+                    key={friend._id} 
+                    friend={friend} 
+                    handleDeleteFriend={props.handleDeleteFriend}
+                    user={props.user}
+                  />
+                </li>
+                : 
+                <li key={index}>No Friend</li>
+              )
+            }   
+          </ul>
         :
-        <p>You have no friends yet.</p> 
+          <p>You have no friends yet.</p> 
         }
       </main>
     //   }
