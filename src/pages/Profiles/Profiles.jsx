@@ -1,4 +1,3 @@
-import userEvent from '@testing-library/user-event'
 import { useState, useEffect } from 'react'
 import * as profileService from '../../services/profileService'
 import styles from './Profiles.module.css'
