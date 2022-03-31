@@ -18,7 +18,7 @@ const Profile = (props) => {
   return (
     <div className={styles.container}>
       <h3>{props.user.name}, your zodiac {props.profile.zodiac}.</h3>
-      <div className="card">
+      <div className={styles.card}>
           <ul>
             <li>
               {/* <img src="././designs_rabbit.png" alt="" /> */}
@@ -28,28 +28,28 @@ const Profile = (props) => {
             </li>
           </ul>
       </div>
-      <div className="card">
+      <div className={styles.card}>
         <ul>
           <li>
             Description: {zodiacObj.desc}
           </li>
         </ul>
       </div>
-      <div className="card">
+      <div className={styles.card}>
         <ul>  
           <li>{zodiacObj.celeb1}</li>
           <li>{zodiacObj.celeb2}</li>
           <li>{zodiacObj.celeb3}</li>
         </ul>
       </div>
-      <div className="card">
+      <div className={styles.card}>
         <ul>  
           <li>
             Most Compatible: {zodiacObj.bff}
           </li>
         </ul>
       </div>
-      <div className="card">
+      <div className={styles.card}>
         <ul>  
           <li>
             Worst Enemy: {zodiacObj.nemesis}

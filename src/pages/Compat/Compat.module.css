@@ -1,5 +1,4 @@
 .container {
-  /* padding-left: 2rem; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,6 +7,21 @@
 
 .friend-list {
   border-color: #6661f1;
+}
+
+.card {
+  background-color: whitesmoke;
+  color: #000000DE;
+  border-radius: 1rem;
+  border-style:solid;
+  padding: 1rem;
+  width: 30rem;
+  height: 20rem;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-around;
 }
 
 /* a {
