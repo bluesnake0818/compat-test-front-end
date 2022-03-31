@@ -16,7 +16,10 @@ const Profile = (props) => {
 
   const yourZod = props.profile.zodiac
   const yourZodImg = `/designs_${yourZod}.png`
-
+  const bff = zodiacObj.bff
+  const nemesis = zodiacObj.nemesis
+  const yourBffImg = `/designs_${bff}.png`
+  const yourNemesisImg = `/designs_${nemesis}.png`
 
   return (
     <div className={styles.container}>
@@ -45,7 +48,8 @@ const Profile = (props) => {
       <div className={styles.card}>
         <ul className={styles.list}>  
           <li className={styles.listItem}>
-            Most Compatible: {zodiacObj.bff}
+            <p>Most Compatible: {zodiacObj.bff}</p>
+            <img className={styles.image} src={yourBffImg} alt="" />
           </li>
         </ul>
       </div>
@@ -54,7 +58,8 @@ const Profile = (props) => {
       <div className={styles.card}>
         <ul className={styles.list}>  
           <li className={styles.listItem}>
-            Worst Enemy: {zodiacObj.nemesis}
+            <p>Worst Enemy: {zodiacObj.nemesis}</p>
+            <img className={styles.image} src={yourNemesisImg} alt="" />
           </li>
         </ul>
       </div>
