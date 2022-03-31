@@ -28,7 +28,7 @@ const Compat = (props) => {
                   />
                 </li>
                 : 
-                <li key={index}>No Friend</li>
+                <li key={index}></li>
               )
             }   
           </ul>

@@ -28,7 +28,7 @@ const NavBar = ({ user, handleLogout }) => {
           <nav>
             <ul className={styles.userNavLinks}>
               {/* <li className={styles.listItem}><Link to="/profile">{user.name}'s Profile</Link></li> */}
-              <Link to="" onClick={handleLogout}><button className={styles.button}>Log Out</button></Link>
+              <li className={styles.listItem}><Link to="" onClick={handleLogout}>Log Out</Link></li>
               <li className={styles.listItem}><Link to="/profile"><PersonIcon /> {user.name}'s Profile</Link></li>
               <li className={styles.listItem}><Link to="/compat"><ExtensionIcon /> Compatibility</Link></li>
             </ul>

@@ -3,13 +3,13 @@
   height: 80vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   font-size: 1.4rem;
 }
 
 .button {
-  margin: 2rem 0 2rem 0;
+  margin: 2rem 0 0 0;
   border-radius: 10px;
   /* border-color: #6661F1; */
   width: 36rem;
