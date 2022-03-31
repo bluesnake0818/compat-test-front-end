@@ -2,6 +2,11 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import styles from './LoginForm.module.css'
 import * as authService from '../../services/authService'
+import Box from '@mui/material/Box'
+import Button from '@mui/material/Button'
+import Paper from '@mui/material/Paper'
+import TextField from '@mui/material/TextField'
+
 
 const LoginForm = props => {
   const [formData, setFormData] = useState({
@@ -27,40 +32,65 @@ const LoginForm = props => {
   }
 
   return (
-    <form
-      autoComplete="off"
-      onSubmit={handleSubmit}
-      className={styles.container}
-    >
-      <div className={styles.inputContainer}>
-        <label htmlFor="email" className={styles.label}>Email</label>
-        <input
-          type="text"
-          autoComplete="off"
-          id="email"
-          value={formData.email}
-          name="email"
-          onChange={handleChange}
-        />
-      </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="password" className={styles.label}>Password</label>
-        <input
-          type="password"
-          autoComplete="off"
-          id="password"
-          value={formData.pw}
-          name="pw"
-          onChange={handleChange}
-        />
-      </div>
-      <div>
-        <button className={styles.button}>Log In</button>
-        <Link to="/">
-          <button className={styles.button}> Cancel</button>
-        </Link>
-      </div>
-    </form>
+    <main className={styles.container}>
+      <h3 className={styles.title}>Log In.</h3>
+      <Box
+				display="flex" 
+				justifyContent="center" 
+				alignItems="center"
+				sx={{ width: "50%", mt: '5rem' }}
+			>
+				<Paper elevation={4} sx={{ width: "100%", p: "1rem" }}>
+          <form
+            autoComplete="off"
+            onSubmit={handleSubmit}
+            className={styles.form}
+          >
+            <TextField
+              className={styles.inputField}
+							autoComplete="off"
+							margin="normal"
+							fullWidth
+							required
+							type="text"
+							name="email"
+							label="Email"
+							value={formData.email}
+							onChange={handleChange}
+						/>
+            <TextField
+              className={styles.inputField}
+							autoComplete="off"
+							margin="normal"
+							fullWidth
+							required
+							type="password"
+							name="pw"
+							label="Password"
+							value={formData.pw}
+							onChange={handleChange}
+						/>
+            <Button
+							className={styles.button}
+              type="submit"
+							variant="contained"
+							fullWidth
+						>
+							Log In
+						</Button>
+            <Link to="/">
+              <Button 
+                variant="contained"
+							  fullWidth
+                className={styles.button}
+              > 
+                Cancel
+              </Button>
+            </Link>
+          </form>
+        </Paper>
+			</Box>
+    </main>
   )
 }
 
