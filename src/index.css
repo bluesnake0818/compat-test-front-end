@@ -1,6 +1,7 @@
 :root {
   font-size: 62.5%;
   --mochiy_pop_one: 'Mochiy Pop One', sans-serif;
+  --roboto_mono: 'Roboto Mono', monospace;
 }
 
 body {
@@ -10,7 +11,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: var(--mochiy_pop_one);
+  font-family: var(--roboto_mono);
   min-height: 100vh;
   display: flex;
   justify-content: center;

@@ -2,6 +2,7 @@
   color: white;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  font-family: var(--mochiy_pop_one);
 }
 
 /* .navLinks {
