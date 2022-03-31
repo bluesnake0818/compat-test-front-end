@@ -30,49 +30,49 @@ const App = () => {
     }
   )
 
-  useEffect(()=> {
-    profileService.getAllProfiles()
-    .then(profiles => {
-      setProfile(profiles.find(profile => profile._id === user.profile))
-    })
-  }, [])
+  // useEffect(()=> {
+  //   profileService.getAllProfiles()
+  //   .then(profiles => {
+  //     setProfile(profiles.find(profile => profile._id === user.profile))
+  //   })
+  // }, [])
 
-  useEffect(()=> {
-    if(user) {
-      friendService.getAll()
-      .then(allFriends => setFriends(allFriends))
-    }
-  }, [user])
+  // useEffect(()=> {
+  //   if(user) {
+  //     friendService.getAll()
+  //     .then(allFriends => setFriends(allFriends))
+  //   }
+  // }, [user])
 
-  const handleAddFriend = async newFriendData => {
-    const newFriend = await friendService.create(newFriendData)
-    setFriends([...friends, newFriend])
-    navigate('/compat')
-  }
+  // const handleAddFriend = async newFriendData => {
+  //   const newFriend = await friendService.create(newFriendData)
+  //   setFriends([...friends, newFriend])
+  //   navigate('/compat')
+  // }
 
-  const handleDeleteFriend = id => {
-    friendService.deleteOne(id)
-    .then(deletedFriend => setFriends(friends.filter(friend => friend._id !== deletedFriend._id)))
-  }
+  // const handleDeleteFriend = id => {
+  //   friendService.deleteOne(id)
+  //   .then(deletedFriend => setFriends(friends.filter(friend => friend._id !== deletedFriend._id)))
+  // }
 
-  const handleUpdateFriend =  updatedFriendData => {
-    friendService.update(updatedFriendData)
-    .then(updatedFriend => {
-      const newFriendsArray = friends.map(friend => friend._id === updatedFriend._id ? updatedFriend : friend)
-      setFriends(newFriendsArray)
-      navigate('/compat')
-    })
-  }
+  // const handleUpdateFriend =  updatedFriendData => {
+  //   friendService.update(updatedFriendData)
+  //   .then(updatedFriend => {
+  //     const newFriendsArray = friends.map(friend => friend._id === updatedFriend._id ? updatedFriend : friend)
+  //     setFriends(newFriendsArray)
+  //     navigate('/compat')
+  //   })
+  // }
 
-  const handleLogout = () => {
-    authService.logout()
-    setUser(null)
-    navigate('/')
-  }
+  // const handleLogout = () => {
+  //   authService.logout()
+  //   setUser(null)
+  //   navigate('/')
+  // }
 
-  const handleSignupOrLogin = () => {
-    setUser(authService.getUser())
-  }
+  // const handleSignupOrLogin = () => {
+  //   setUser(authService.getUser())
+  // }
   
   return (
     <main className={styles.container}>
