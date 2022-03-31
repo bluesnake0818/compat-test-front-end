@@ -18,10 +18,10 @@ const NavBar = ({ user, handleLogout }) => {
           </nav>
         }
       </div> */}
-      <p className='title'>
+      <p className={styles.title}>
         hangfive
       </p>
-      <div className='profile'>
+      <div className={styles.profile}>
         {user ?
           <nav>
             <ul>
