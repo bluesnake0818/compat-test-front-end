@@ -1,8 +1,7 @@
-import { useState, useRef, useEffect } from "react"
+import { useState } from "react"
 import { Link, useLocation } from 'react-router-dom'
 import styles from './ShowCompat.module.css'
 import { CompatData } from './CompatData';
-import reactDom from "react-dom";
 import React from "react";
 
 
@@ -21,7 +20,9 @@ function ShowCompat({ user }) {
         <div className="card-body">
           <ul className={styles.list}>
             <li>{friend.owner.name}'s zodiac is {yourZod}.</li>
-            <li>{friend.name}'s zodiac is {theirZod}.  </li>
+            <li><img src='/designs_rabbit.png' alt="zodiac image" className={styles.image} /></li>
+            <li>{friend.name}'s zodiac is {theirZod}.</li>
+            <li><img src='/designs_rooster.png' alt="zodiac image" className={styles.image} /></li>
             <li>{compats[yourZod][theirZod]}</li>
           </ul>
         </div>
