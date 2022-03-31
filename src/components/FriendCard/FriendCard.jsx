@@ -1,23 +1,10 @@
 import { Link } from 'react-router-dom'
-import './FriendCard.css'
-// import ShowCompat from '../../pages/ShowCompat/ShowCompat'
-import Box from '@mui/material/Box'
-// import Paper from '@mui/material/Paper'
-// import ListItem from '@mui/material/ListItem'
-// import List from '@mui/material/List'
-// import Divider from '@mui/material/Divider'
-// import ListItemText from '@mui/material/ListItemText'
-// import ListItemIcon from '@mui/material/ListItemIcon'
-// import PersonIcon from '@mui/icons-material/Person'
-// import CakeIcon from '@mui/icons-material/Cake'
-// import PetsIcon from '@mui/icons-material/Pets'
-// import { Button } from '@mui/material'
-// import ListItemButton from '@mui/material/ListItemButton';
+import styles from './FriendCard.module.css'
 
 
 function FriendCard({friend, handleDeleteFriend, user}) {
   return (
-    <div className="card">
+    <div className={styles.card}>
       <div className="card-body">
         <Link
           to='/showCompat' 

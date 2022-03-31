@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
-import './NavBar.css'
+import styles from './NavBar.module.css'
 
 const NavBar = ({ user, handleLogout }) => {
   return (
-    <div className='navBarMain'>
+    <main className={styles.container}>
       {/* <div className='navLinks'>
         {user ?
           <nav>
@@ -38,7 +38,7 @@ const NavBar = ({ user, handleLogout }) => {
           </nav>
         } 
       </div>
-    </div>
+    </main>
   )
 }
 

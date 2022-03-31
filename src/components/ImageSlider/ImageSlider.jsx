@@ -1,4 +1,4 @@
-import './ImageSlider.css'
+import styles from './ImageSlider.module.css'
 import React, {useState} from 'react'
 import { SliderData } from './SliderData';
 import {FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'
@@ -23,7 +23,7 @@ const ImageSlider = ({ slides }) => {
 
 
   return (
-      <section className='slider'>
+      <section className={styles.slider}>
         <FaArrowAltCircleLeft className='left-arrow' onClick={prevSlide} />
         <FaArrowAltCircleRight className='right-arrow' onClick={nextSlide} />
         {SliderData.map((slide, index) => {

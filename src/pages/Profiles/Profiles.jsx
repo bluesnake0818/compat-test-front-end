@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import * as profileService from '../../services/profileService'
+import styles from './Profiles.module.css'
 
 const Profiles = () => {
   const [profiles, setProfiles] = useState([])
@@ -10,7 +11,7 @@ const Profiles = () => {
   }, [])
 
   return (
-    <>
+    <main className={styles.container}>
       <h1>Hello. This is a list of all the profiles.</h1>
       {profiles.length ? 
         <>
@@ -21,7 +22,7 @@ const Profiles = () => {
       :
         <p>No profiles yet</p>
       }
-    </>
+    </main>
   )
 }
  

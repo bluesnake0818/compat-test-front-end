@@ -1,5 +1,6 @@
 import { ZodiacData } from './ZodiacData';
 import { useState, useEffect } from 'react'
+import styles from './Profile.module.css'
 
 const Profile = (props) => {
   const [zodiacs, setZodiacs] = useState(ZodiacData)
@@ -15,7 +16,7 @@ const Profile = (props) => {
   const yourZod = props.profile.zodiac
 
   return (
-    <div className='main'>
+    <div className={styles.container}>
       <h3>{props.user.name}, your zodiac {props.profile.zodiac}.</h3>
       <div className="card">
           <ul>

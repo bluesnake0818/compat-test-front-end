@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react"
 import { Link, useLocation } from 'react-router-dom'
-import './EditFriend.css'
+import styles from './EditFriend.module.css'
 
 function EditFriend(props) {
   const location = useLocation()
@@ -106,7 +106,7 @@ function EditFriend(props) {
 	}
 
 	return (
-		<>
+		<main className={styles.container}>
 			<h1>Edit Friend</h1>
 			<form autoComplete="off" ref={formElement} onSubmit={handleSubmit}>
 				<div className="form-group mb-3">
@@ -211,7 +211,7 @@ function EditFriend(props) {
 					</Link>
 				</div>
 			</form>
-		</>
+		</main>
 	)
 }
 

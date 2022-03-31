@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react"
 import { Link, useLocation } from 'react-router-dom'
-import './ShowCompat.css'
+import styles from './ShowCompat.module.css'
 import CompatView from '../../components/CompatView/CompatView';
 import { CompatData } from '../../components/CompatView/CompatData';
 import reactDom from "react-dom";
@@ -16,8 +16,7 @@ function ShowCompat({ user }) {
   const theirZod = friend.zodiac
 
   return (
-    <div className='showCompat'>
-
+    <main className={styles.container}>
       <div>
         {friend.owner.name}'s zodiac is {yourZod}.
       </div>
@@ -27,7 +26,7 @@ function ShowCompat({ user }) {
       <div> 
         {compats[yourZod][theirZod]}
       </div>
-    </div>
+    </main>
   )
 }
 
