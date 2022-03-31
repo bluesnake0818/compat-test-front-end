@@ -21,23 +21,27 @@ const Profile = (props) => {
   return (
     <div className={styles.container}>
       <h3>{props.user.name}, your zodiac is {props.profile.zodiac}.</h3>
+      <img src={yourZodImg} alt="" className={styles.image}/>
+
+      <h5>Archetype</h5>
       <div className={styles.card}>
         <ul className={styles.list}>
           <li className={styles.listItem}>
-            <img src={yourZodImg} alt="" className={styles.image}/>
-          </li>
-          <li className={styles.listItem}>
-            Archetype: {zodiacObj.archetype}
+            {zodiacObj.archetype}
           </li>
         </ul>
       </div>
+
+      <h5>Description</h5>
       <div className={styles.card}>
         <ul className={styles.list}>
           <li className={styles.listItem}>
-            Description: {zodiacObj.desc}
+            {zodiacObj.desc}
           </li>
         </ul>
       </div>
+
+      <h5>Celebs in {yourZod}</h5>
       <div className={styles.card}>
         <ul className={styles.list}>  
           <li className={styles.listItem}>{zodiacObj.celeb1}</li>
@@ -45,6 +49,8 @@ const Profile = (props) => {
           <li className={styles.listItem}>{zodiacObj.celeb3}</li>
         </ul>
       </div>
+
+      <h5>Your best friend</h5>
       <div className={styles.card}>
         <ul className={styles.list}>  
           <li className={styles.listItem}>
@@ -52,6 +58,8 @@ const Profile = (props) => {
           </li>
         </ul>
       </div>
+
+      <h5>Your worst enemy</h5>
       <div className={styles.card}>
         <ul className={styles.list}>  
           <li className={styles.listItem}>
