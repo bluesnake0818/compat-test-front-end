@@ -22,7 +22,7 @@ const Profile = (props) => {
       <div className={styles.card}>
         <ul className={styles.profileDetailsList}>
           <li className={styles.profileDetailsListItem}>
-            {/* <img src="././designs_rabbit.png" alt="" /> */}
+            <img src="/designs_rabbit.png" alt="" className={styles.image}/>
           </li>
           <li className={styles.profileDetailsListItem}>
             Archetype: {zodiacObj.archetype}
