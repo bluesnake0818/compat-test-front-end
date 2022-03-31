@@ -73,7 +73,7 @@ const App = () => {
   
   return (
     <main className={styles.container}>
-      <NavBar user={user} handleLogout={handleLogout} />
+      <NavBar user={user}  />
       <Routes>
         <Route 
           path="/" 
@@ -138,6 +138,7 @@ const App = () => {
               friends={friends}
               user={user}
               profile={profile}
+              handleLogout={handleLogout}
             />
             : 
             <Navigate to="/login" />

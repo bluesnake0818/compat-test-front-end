@@ -1,5 +1,6 @@
 import { ZodiacData } from './ZodiacData';
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import styles from './Profile.module.css'
 
 const Profile = (props) => {
@@ -17,7 +18,7 @@ const Profile = (props) => {
 
   return (
     <div className={styles.container}>
-      <h3>{props.user.name}, your zodiac {props.profile.zodiac}.</h3>
+      <h3>{props.user.name}, your zodiac is {props.profile.zodiac}.</h3>
       <div className={styles.card}>
           <ul>
             <li>
@@ -56,6 +57,9 @@ const Profile = (props) => {
           </li>
         </ul>
       </div>
+      <ul>  
+        <li className={styles.listItem}><Link to="" onClick={props.handleLogout}>Log Out</Link></li>
+      </ul>
     </div>
   )
 }

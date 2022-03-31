@@ -25,15 +25,15 @@ const NavBar = ({ user, handleLogout }) => {
         {user ?
           <nav>
             <ul>
-              <li><Link to="/profile">Profile</Link></li>
-              <li><Link to="" onClick={handleLogout}>Log Out</Link></li>
+              <li className={styles.listItem}><Link to="/profile">{user.name}'s Profile</Link></li>
+
             </ul>
           </nav>
         :
           <nav>
             <ul>
-              <li><Link to="/login">Log In</Link></li>
-              <li><Link to="/signup">Sign Up</Link></li>
+              <li className={styles.listItem}><Link to="/login">Log In</Link></li>
+              <li className={styles.listItem}><Link to="/signup">Sign Up</Link></li>
             </ul>
           </nav>
         } 
