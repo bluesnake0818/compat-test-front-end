@@ -5,9 +5,6 @@
   align-items: center;
 }
 
-.friendList {
-  border-color: #6661f1;
-}
 
 .card {
   background-color: whitesmoke;
@@ -19,14 +16,19 @@
   height: 20rem;
 }
 
-.friendList {
+.list {
   list-style: none;
   /* width: 40vw; */
   padding-left: 0;
 }
 
-li {
+.listItem {
   border-color: #6661f1;
   margin-bottom: 1rem;
 }
 
+.button {
+  margin-top: 1rem;
+  height: 4rem;
+  border-radius: 10px;
+}
