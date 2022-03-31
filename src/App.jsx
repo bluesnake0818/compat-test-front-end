@@ -1,27 +1,11 @@
-import styles from './App.module.css'
-import { useState, useEffect } from 'react'
-import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
-import * as friendService from './services/friends'
-import * as authService from './services/authService'
-import * as profileService from './services/profileService'
-import Landing from './pages/Landing/Landing'
-import NavBar from './components/NavBar/NavBar'
-import Zodiac from './pages/Zodiac/Zodiac'
-import SignupOrLogin from './pages/SignupOrLogin/SignupOrLogin'
-import Signup from './pages/Signup/Signup'
-import Login from './pages/Login/Login'
-import ChangePassword from './pages/ChangePassword/ChangePassword'
-import PremiumContent from './pages/PremiumContent/PremiumContent'
-import Profiles from './pages/Profiles/Profiles'
-import Profile from './pages/Profile/Profile'
-import Compat from './pages/Compat/Compat'
-import ShowCompat from './pages/ShowCompat/ShowCompat'
-import AddFriend from './pages/AddFriend/AddFriend'
-import EditFriend from './pages/EditFriend/EditFriend'
+
 
 
 
 const App = () => {
+  return (
+  <></>
+  )
   // const [friends, setFriends] = useState([])
   // const navigate = useNavigate()
   // const [user, setUser] = useState(authService.getUser())
