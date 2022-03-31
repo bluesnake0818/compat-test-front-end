@@ -2,16 +2,10 @@ import { ZodiacData } from './ZodiacData';
 import { useState, useEffect } from 'react'
 
 const Profile = (props) => {
-
   const [zodiacs, setZodiacs] = useState(ZodiacData)
   const [zodiacObj, setZodiacObj] = useState(
    {} 
   )
-  
-
-
-
-  
   
   useEffect(() => {
     if (props.profile.zodiac)
@@ -19,9 +13,6 @@ const Profile = (props) => {
     },[props.profile.zodiac])
 
   const yourZod = props.profile.zodiac
-
-  
-
 
   return (
     <div className='main'>

@@ -1,4 +1,4 @@
-import './SignupOrLogin.css'
+import styles from './SignupOrLogin.css'
 import { Link } from 'react-router-dom'
 
 const SignupOrLogin = props => {
