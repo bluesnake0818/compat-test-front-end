@@ -10,14 +10,54 @@
   text-align: center;
 }
 
-.links {
-  margin-top: 5rem;
+.link {
+  margin-top: 2rem;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: flex-start;
   align-items: center;
 }
 
-.instructions {
-  font-size: 1rem;
+.image {
+  width: 10rem;
+  height: 10rem;
+  margin: 3rem 0 3rem 0;
+}
+
+.paragraph {
+  text-align: center;
+  /* margin-right: 2rem; */
+}
+
+.compatChoice {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%
+}
+
+.button {
+  margin: 2rem 0 0 0;
+  border-radius: 10px;
+  border-color: #6661F1;
+  width: 36rem;
+  height: 5rem;
+  background-color: transparent;
+  color: #6661F1;
+  /* background-color: #6661F1; */
+  /* color: whitesmoke; */
+  font-weight: bold;
+  font-size: 2rem;
+  transition: none;
+  box-shadow: none;
+}
+
+
+.button:hover {
+  color: white;
+  background-color:  #6661F1;
+}
+
+.button:focus {
+  box-shadow: none;
 }

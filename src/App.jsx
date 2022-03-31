@@ -108,6 +108,7 @@ const App = () => {
             user ?
             <PremiumContent 
               user={user}
+              profile={profile}
             />
             : <Navigate to="/signupOrLogin"  />
           }
