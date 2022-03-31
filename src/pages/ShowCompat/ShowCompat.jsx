@@ -12,6 +12,8 @@ function ShowCompat({ user }) {
   const friend = location.state.friend
   const yourZod = friend.owner.zodiac
   const theirZod = friend.zodiac
+  const yourZodImg = `/designs_${yourZod}.png`
+  const theirZodImg = `/designs_${theirZod}.png`
 
   return (
     <main className={styles.container}>
@@ -20,9 +22,9 @@ function ShowCompat({ user }) {
         <div className="card-body">
           <ul className={styles.list}>
             <li>{friend.owner.name}'s zodiac is {yourZod}.</li>
-            <li><img src='/designs_rabbit.png' alt="zodiac image" className={styles.image} /></li>
+            <li><img src={yourZodImg} alt="zodiac image" className={styles.image} /></li>
             <li>{friend.name}'s zodiac is {theirZod}.</li>
-            <li><img src='/designs_rooster.png' alt="zodiac image" className={styles.image} /></li>
+            <li><img src={theirZodImg} alt="zodiac image" className={styles.image} /></li>
             <li>{compats[yourZod][theirZod]}</li>
           </ul>
         </div>
