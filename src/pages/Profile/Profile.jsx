@@ -6,7 +6,7 @@ import styles from './Profile.module.css'
 const Profile = (props) => {
   const [zodiacs, setZodiacs] = useState(ZodiacData)
   const [zodiacObj, setZodiacObj] = useState(
-   {} 
+    {} 
   )
   
   useEffect(() => {

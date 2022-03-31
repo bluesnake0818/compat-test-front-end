@@ -12,7 +12,7 @@ const Compat = (props) => {
     //               :
       <main className={styles.container}>    
         <h3>{props.user.name}'s compatibility test zone</h3>
-        <Link to='/AddFriend'>
+        <Link to='/addFriend'>
           <button className={styles.button}>Add Friend</button>
         </Link>    
           {props.friends.length ?

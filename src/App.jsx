@@ -31,7 +31,7 @@ const App = () => {
     profileService.getAllProfiles()
     .then(profiles => {
       setProfile(profiles.find(profile => profile._id === user.profile))
-  })
+    })
   }, [])
 
   useEffect(()=> {
@@ -122,7 +122,7 @@ const App = () => {
           }
         />
         <Route
-          path="/AddFriend"
+          path="/addFriend"
           element={<AddFriend handleAddFriend={handleAddFriend} />}
         />
         <Route 
