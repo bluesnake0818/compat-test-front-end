@@ -1,21 +1,23 @@
+import styles from './App.module.css'
 import { useState, useEffect } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
-import styles from './App.module.css'
 import * as friendService from './services/friends'
 import * as authService from './services/authService'
 import * as profileService from './services/profileService'
-import Compat from './pages/Compat/Compat'
+import Landing from './pages/Landing/Landing'
+import NavBar from './components/NavBar/NavBar'
+import Zodiac from './pages/Zodiac/Zodiac'
+import SignupOrLogin from './pages/SignupOrLogin/SignupOrLogin'
+import Signup from './pages/Signup/Signup'
+import Login from './pages/Login/Login'
+import ChangePassword from './pages/ChangePassword/ChangePassword'
+import Profiles from './pages/Profiles/Profiles'
 import Profile from './pages/Profile/Profile'
+import Compat from './pages/Compat/Compat'
 import ShowCompat from './pages/ShowCompat/ShowCompat'
 import AddFriend from './pages/AddFriend/AddFriend'
 import EditFriend from './pages/EditFriend/EditFriend'
-import NavBar from './components/NavBar/NavBar'
-import Signup from './pages/Signup/Signup'
-import Login from './pages/Login/Login'
-import Landing from './pages/Landing/Landing'
-import Zodiac from './pages/Zodiac/Zodiac'
-import SignupOrLogin from './pages/SignupOrLogin/SignupOrLogin'
-import ChangePassword from './pages/ChangePassword/ChangePassword'
+
 
 
 const App = () => {
@@ -132,6 +134,10 @@ const App = () => {
               handleUpdateFriend={handleUpdateFriend}
             />
           }
+        />
+        <Route
+          path="/profiles"
+          element={user ? <Profiles user={user} /> : <Navigate to="/login" />}
         />
         <Route
           path="/profile"
