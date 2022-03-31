@@ -28,8 +28,8 @@ const NavBar = ({ user, handleLogout }) => {
           <nav>
             <ul className={styles.userNavLinks}>
               {/* <li className={styles.listItem}><Link to="/profile">{user.name}'s Profile</Link></li> */}
-              <li className={styles.listItem}><Link to="/profile"><PersonIcon /></Link></li>
-              <li className={styles.listItem}><Link to="/compat"><ExtensionIcon /></Link></li>
+              <li className={styles.listItem}><Link to="/profile"><PersonIcon /> {user.name}'s Profile</Link></li>
+              <li className={styles.listItem}><Link to="/compat"><ExtensionIcon /> Compatibility</Link></li>
             </ul>
           </nav>
         :

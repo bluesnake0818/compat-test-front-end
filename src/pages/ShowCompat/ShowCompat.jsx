@@ -17,14 +17,14 @@ function ShowCompat({ user }) {
 
   return (
     <main className={styles.container}>
-      <div>
-        {friend.owner.name}'s zodiac is {yourZod}.
-      </div>
-      <div>
-        {friend.name}'s zodiac is {theirZod}.  
-      </div>
-      <div> 
-        {compats[yourZod][theirZod]}
+      <div className={styles.card}>
+        <div className="card-body">
+          <ul className={styles.list}>
+            <li>{friend.owner.name}'s zodiac is {yourZod}.</li>
+            <li>{friend.name}'s zodiac is {theirZod}.  </li>
+            <li>{compats[yourZod][theirZod]}</li>
+          </ul>
+        </div>
       </div>
     </main>
   )

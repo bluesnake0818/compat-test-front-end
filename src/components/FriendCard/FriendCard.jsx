@@ -14,7 +14,7 @@ function FriendCard({friend, handleDeleteFriend, user}) {
           <h2 className="card-text">{friend.name} (see compatibility)</h2>
           
         </Link>
-        <ul className={styles.friendInfoList}>
+        <ul className={styles.list}>
           <li><p className="card-text">Birth Year: {friend.birthYear}</p></li>
           <li><p className="card-text">Zodiac: {friend.zodiac}</p></li>
         </ul>

@@ -57,7 +57,9 @@ const Profile = (props) => {
           </li>
         </ul>
       </div>
-      <button className={styles.button}><Link to="" onClick={props.handleLogout}>Log Out</Link></button>
+      <Link to="" onClick={props.handleLogout}>
+          <button className={styles.button}>Log Out</button>
+      </Link>
     </div>
   )
 }

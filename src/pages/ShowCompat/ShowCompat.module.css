@@ -1,3 +1,21 @@
-.container{
-  
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: whitesmoke;
+  color: #000000DE;
+  border-radius: 1rem;
+  border-style:solid;
+  padding: 1rem;
+  width: 30rem;
+  min-height: 20rem;
+}
+
+.list {
+  list-style: none;
+  padding: 1rem;
 }
