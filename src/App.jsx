@@ -27,14 +27,15 @@ const App = () => {
   const [profile, setProfile] = useState({
     name: ''
   })
-  
-  // useEffect(()=> {
-  // }, [])
+  const [friendsLoaded, setFriendsLoaded] = useState(false)
   
   useEffect(()=> {
     if(user) {
       friendService.getAll()
-      .then(allFriends => setFriends(allFriends))
+      .then(allFriends => {
+        setFriends(allFriends)
+        setFriendsLoaded(true)
+      })
       profileService.getAllProfiles()
       .then(profiles => {
         setProfile(profiles.find(profile => profile._id === user.profile))
@@ -118,7 +119,9 @@ const App = () => {
             <Compat 
               handleDeleteFriend={handleDeleteFriend}
               friends={friends}
+              friendsLoaded={friendsLoaded}
               user={user}
+              profile={profile}
             />
             : <Navigate to="/signupOrLogin" />
           }

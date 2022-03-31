@@ -1,16 +1,16 @@
 import styles from './Compat.module.css'
 import { Link } from 'react-router-dom';
 import FriendCard from '../../components/FriendCard/FriendCard';
-import { useState, useEffect } from 'react'
+
 const Compat = (props) => {
   return (
-    // <>
-    //   { props.friends.name ?
-    //     <>
-    //       <p>Loading...</p>
-    //     </>
-    //               :
-      <main className={styles.container}>    
+    <>
+      {!props.friendsLoaded ?
+        <>
+          <p>Loading...</p>
+        </>
+                  :
+        <main className={styles.container}>    
         <h3>{props.user.name}'s compatibility test zone</h3>
         <Link to='/addFriend'>
           <button className={styles.button}>Add Friend</button>
@@ -18,7 +18,7 @@ const Compat = (props) => {
         {props.friends.length ?
           <ul className={styles.list}>
             {props.friends.map((friend, index) => 
-              (friend.owner._id === props.user.profile) ?
+              (friend.owner._id === props.user.profile) &&
                 <li key={index} className={styles.listItem}>
                   <FriendCard
                     key={friend._id} 
@@ -27,8 +27,6 @@ const Compat = (props) => {
                     user={props.user}
                   />
                 </li>
-                : 
-                <li key={index}></li>
               )
             }   
           </ul>
@@ -36,8 +34,8 @@ const Compat = (props) => {
           <p>You have no friends yet.</p> 
         }
       </main>
-    //   }
-    // </>
+      }
+    </>
   )
 }
 
