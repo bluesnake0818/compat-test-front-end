@@ -20,17 +20,8 @@ const Profile = (props) => {
 
   return (
     <div className={styles.container}>
-      <h3>{props.user.name}, your zodiac is {props.profile.zodiac}.</h3>
+      <h3>{zodiacObj.name} - {zodiacObj.archetype}</h3>
       <img src={yourZodImg} alt="" className={styles.image}/>
-
-      <h5>Archetype</h5>
-      <div className={styles.card}>
-        <ul className={styles.list}>
-          <li className={styles.listItem}>
-            {zodiacObj.archetype}
-          </li>
-        </ul>
-      </div>
 
       <h5>Description</h5>
       <div className={styles.card}>

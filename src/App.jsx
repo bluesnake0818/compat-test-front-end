@@ -73,7 +73,7 @@ const App = () => {
   
   return (
     <main className={styles.container}>
-      <NavBar user={user}  />
+      <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
         <Route 
           path="/" 
