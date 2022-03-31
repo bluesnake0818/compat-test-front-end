@@ -15,9 +15,16 @@
   height: 20rem;
 }
 
-ul {
+.profileDetailsList {
   width: 100%;
+  list-style: none;
+  padding: 0;
 }
+
+/* .profileDetailsListItem {
+  width: 90%;
+
+} */
 
 .button {
   

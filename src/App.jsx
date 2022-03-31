@@ -102,11 +102,13 @@ const App = () => {
         <Route
           path="/compat"
           element={
+            user ?
             <Compat 
               handleDeleteFriend={handleDeleteFriend}
               friends={friends}
               user={user}
             />
+            : <Navigate to="/signupOrLogin" />
           }
         />
         <Route

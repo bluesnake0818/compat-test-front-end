@@ -27,27 +27,41 @@
   width: 10rem;
   font-size: 1.4rem;
   height: 3rem;
-  color: #FFC83D !important;
+  color: #FFC83D ;
   border-color: #FFC83D;
   text-align: center;
-  background-color: transparent !important;
+  background-color: transparent;
 }
 
 .deleteButton {
   width: 10rem;
   height: 3rem;
   font-size: 1.4rem;
-  color: #FF6969 !important;
+  color: #FF6969;
   border-color: #FF6969 ;  
-  background-color: transparent !important;
-  margin: 0 !important;
+  background-color: transparent ;
+  margin: 0;
 }
 
+.editButton:hover {
+  color: whitesmoke;
+  background-color: #FFC83D;
+}
+
+.deleteButton:hover {
+  color: whitesmoke;
+  background-color: #FF6969;
+}
 
 .compatLink {
   color: #000000DE
 }
 
 .compatLink:hover {
-  color:#6661f1;
+  color: whitesmoke;
+  background-color: #FFC83D;
+}
+
+.friendInfoList {
+  list-style: none;
 }

@@ -7,7 +7,8 @@ function Zodiac() {
   return (
     <div className={styles.container}>
       <ImageSlider slides={SliderData} />
-      <Link to='/SignupOrLogin'><button className='button'>Learn More</button></Link>    
+
+      <Link to='/Compat'><button className='button'>Learn More</button></Link>    
     </div>
   )
 }

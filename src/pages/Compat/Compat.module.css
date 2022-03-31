@@ -19,8 +19,8 @@
   height: 20rem;
 }
 
-
-ul {
+.friendList {
+  list-style: none;
   width: 40vw;
   padding-left: 0;
 }

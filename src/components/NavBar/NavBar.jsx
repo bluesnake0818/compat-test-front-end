@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import styles from './NavBar.module.css'
 import PersonIcon from '@mui/icons-material/Person'
+import ExtensionIcon from '@mui/icons-material/Extension';
 
 const NavBar = ({ user, handleLogout }) => {
   return (
@@ -19,20 +20,21 @@ const NavBar = ({ user, handleLogout }) => {
           </nav>
         }
       </div> */}
-      <p className={styles.title}>
-        hangfive
-      </p>
+      <Link to="/" className={styles.title}>
+        <p >hangfive</p>
+      </Link>
       <div className={styles.profile}>
         {user ?
           <nav>
-            <ul>
+            <ul className={styles.userNavLinks}>
               {/* <li className={styles.listItem}><Link to="/profile">{user.name}'s Profile</Link></li> */}
               <li className={styles.listItem}><Link to="/profile"><PersonIcon /></Link></li>
+              <li className={styles.listItem}><Link to="/compat"><ExtensionIcon /></Link></li>
             </ul>
           </nav>
         :
           <nav>
-            <ul>
+            <ul className={styles.guestNavLinks}>
               <li className={styles.listItem}><Link to="/login">Log In</Link></li>
               <li className={styles.listItem}><Link to="/signup">Sign Up</Link></li>
             </ul>

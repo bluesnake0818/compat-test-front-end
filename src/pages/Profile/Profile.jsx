@@ -20,39 +20,39 @@ const Profile = (props) => {
     <div className={styles.container}>
       <h3>{props.user.name}, your zodiac is {props.profile.zodiac}.</h3>
       <div className={styles.card}>
-          <ul>
-            <li>
-              {/* <img src="././designs_rabbit.png" alt="" /> */}
-            </li>
-            <li>
-              Archetype: {zodiacObj.archetype}
-            </li>
-          </ul>
+        <ul className={styles.profileDetailsList}>
+          <li className={styles.profileDetailsListItem}>
+            {/* <img src="././designs_rabbit.png" alt="" /> */}
+          </li>
+          <li className={styles.profileDetailsListItem}>
+            Archetype: {zodiacObj.archetype}
+          </li>
+        </ul>
       </div>
       <div className={styles.card}>
-        <ul>
-          <li>
+        <ul className={styles.profileDetailsList}>
+          <li className={styles.profileDetailsListItem}>
             Description: {zodiacObj.desc}
           </li>
         </ul>
       </div>
       <div className={styles.card}>
-        <ul>  
-          <li>{zodiacObj.celeb1}</li>
-          <li>{zodiacObj.celeb2}</li>
-          <li>{zodiacObj.celeb3}</li>
+        <ul className={styles.profileDetailsList}>  
+          <li className={styles.profileDetailsListItem}>{zodiacObj.celeb1}</li>
+          <li className={styles.profileDetailsListItem}>{zodiacObj.celeb2}</li>
+          <li className={styles.profileDetailsListItem}>{zodiacObj.celeb3}</li>
         </ul>
       </div>
       <div className={styles.card}>
-        <ul>  
-          <li>
+        <ul className={styles.profileDetailsList}>  
+          <li className={styles.profileDetailsListItem}>
             Most Compatible: {zodiacObj.bff}
           </li>
         </ul>
       </div>
       <div className={styles.card}>
-        <ul>  
-          <li>
+        <ul className={styles.profileDetailsList}>  
+          <li className={styles.profileDetailsListItem}>
             Worst Enemy: {zodiacObj.nemesis}
           </li>
         </ul>
