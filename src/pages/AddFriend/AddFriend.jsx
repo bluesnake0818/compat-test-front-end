@@ -114,7 +114,7 @@ function AddFriend(props) {
 
 	return (
 		<main className={styles.container}>
-			<h3 className={styles.title}>Enter your friend's date of birth 🎂</h3>
+			<h3 className={styles.title}>Enter your friend's personal info.</h3>
 			<Box
 				display="flex" 
 				justifyContent="center" 
