@@ -15,44 +15,46 @@ const Profile = (props) => {
     },[props.profile.zodiac])
 
   const yourZod = props.profile.zodiac
+  const yourZodImg = `/designs_${yourZod}.png`
+
 
   return (
     <div className={styles.container}>
       <h3>{props.user.name}, your zodiac is {props.profile.zodiac}.</h3>
       <div className={styles.card}>
-        <ul className={styles.profileDetailsList}>
-          <li className={styles.profileDetailsListItem}>
-            <img src="/designs_rabbit.png" alt="" className={styles.image}/>
+        <ul className={styles.list}>
+          <li className={styles.listItem}>
+            <img src={yourZodImg} alt="" className={styles.image}/>
           </li>
-          <li className={styles.profileDetailsListItem}>
+          <li className={styles.listItem}>
             Archetype: {zodiacObj.archetype}
           </li>
         </ul>
       </div>
       <div className={styles.card}>
-        <ul className={styles.profileDetailsList}>
-          <li className={styles.profileDetailsListItem}>
+        <ul className={styles.list}>
+          <li className={styles.listItem}>
             Description: {zodiacObj.desc}
           </li>
         </ul>
       </div>
       <div className={styles.card}>
-        <ul className={styles.profileDetailsList}>  
-          <li className={styles.profileDetailsListItem}>{zodiacObj.celeb1}</li>
-          <li className={styles.profileDetailsListItem}>{zodiacObj.celeb2}</li>
-          <li className={styles.profileDetailsListItem}>{zodiacObj.celeb3}</li>
+        <ul className={styles.list}>  
+          <li className={styles.listItem}>{zodiacObj.celeb1}</li>
+          <li className={styles.listItem}>{zodiacObj.celeb2}</li>
+          <li className={styles.listItem}>{zodiacObj.celeb3}</li>
         </ul>
       </div>
       <div className={styles.card}>
-        <ul className={styles.profileDetailsList}>  
-          <li className={styles.profileDetailsListItem}>
+        <ul className={styles.list}>  
+          <li className={styles.listItem}>
             Most Compatible: {zodiacObj.bff}
           </li>
         </ul>
       </div>
       <div className={styles.card}>
-        <ul className={styles.profileDetailsList}>  
-          <li className={styles.profileDetailsListItem}>
+        <ul className={styles.list}>  
+          <li className={styles.listItem}>
             Worst Enemy: {zodiacObj.nemesis}
           </li>
         </ul>
