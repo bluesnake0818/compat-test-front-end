@@ -8,16 +8,16 @@ import Landing from './pages/Landing/Landing'
 import NavBar from './components/NavBar/NavBar'
 import Zodiac from './pages/Zodiac/Zodiac'
 import SignupOrLogin from './pages/SignupOrLogin/SignupOrLogin'
-// import Signup from './pages/Signup/Signup'
-// import Login from './pages/Login/Login'
-// import ChangePassword from './pages/ChangePassword/ChangePassword'
-// import PremiumContent from './pages/PremiumContent/PremiumContent'
-// import Profiles from './pages/Profiles/Profiles'
-// import Profile from './pages/Profile/Profile'
-// import Compat from './pages/Compat/Compat'
-// import ShowCompat from './pages/ShowCompat/ShowCompat'
-// import AddFriend from './pages/AddFriend/AddFriend'
-// import EditFriend from './pages/EditFriend/EditFriend'
+import Signup from './pages/Signup/Signup'
+import Login from './pages/Login/Login'
+import ChangePassword from './pages/ChangePassword/ChangePassword'
+import PremiumContent from './pages/PremiumContent/PremiumContent'
+import Profiles from './pages/Profiles/Profiles'
+import Profile from './pages/Profile/Profile'
+import Compat from './pages/Compat/Compat'
+import ShowCompat from './pages/ShowCompat/ShowCompat'
+import AddFriend from './pages/AddFriend/AddFriend'
+import EditFriend from './pages/EditFriend/EditFriend'
 
 
 const App = () => {
@@ -88,7 +88,7 @@ const App = () => {
           path="/signupOrLogin"
           element={<SignupOrLogin />}
         />
-        {/* <Route
+        <Route
           path="/signup"
           element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
         />
@@ -161,7 +161,7 @@ const App = () => {
             : 
             <Navigate to="/login" />
           }
-        />*/}
+        />
       </Routes> 
     </main>
   )
