@@ -22,13 +22,13 @@ import EditFriend from './pages/EditFriend/EditFriend'
 
 
 const App = () => {
-  const [friends, setFriends] = useState([])
-  const navigate = useNavigate()
-  const [user, setUser] = useState(authService.getUser())
-  const [profile, setProfile] = useState({
-    name: ''
-    }
-  )
+  // const [friends, setFriends] = useState([])
+  // const navigate = useNavigate()
+  // const [user, setUser] = useState(authService.getUser())
+  // const [profile, setProfile] = useState({
+  //   name: ''
+  //   }
+  // )
 
   // useEffect(()=> {
   //   profileService.getAllProfiles()
