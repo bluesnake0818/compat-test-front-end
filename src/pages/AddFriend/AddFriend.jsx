@@ -11,7 +11,7 @@ function AddFriend(props) {
   const [validForm, setValidForm] = useState(false)
   const [formData, setFormData] = useState({
     name: '',
-    birthYear: '',
+    birthYear: null,
 		zodiac: '',
   })
 
@@ -21,7 +21,8 @@ function AddFriend(props) {
 
   const handleChange = evt => {
 		if(evt.target.name === 'birthYear'){
-			const numBirthYear = parseInt(evt.target.value)
+			// const numBirthYear = parseInt(evt.target.value)
+			const numBirthYear = evt.target.value
 			if(numBirthYear%12 === 0) {
 				setFormData({...formData, 
 					zodiac: 'monkey',
@@ -128,6 +129,7 @@ function AddFriend(props) {
 							margin="normal"
 							fullWidth
 							required
+							placeholder="John Doe"
 							type="text"
 							name="name"
 							label="Name"
@@ -139,7 +141,8 @@ function AddFriend(props) {
 							margin="normal"
 							fullWidth
 							required
-							type="text"
+							placeholder="between 1900 & 2020"
+							type="number"
 							name="birthYear"
 							label="Birth Year"
 							value={formData.birthYear}
@@ -149,6 +152,7 @@ function AddFriend(props) {
 							autoComplete="off"
 							margin="normal"
 							fullWidth
+							placeholder="automatically updated"
 							required
 							type="text"
 							name="zodiac"

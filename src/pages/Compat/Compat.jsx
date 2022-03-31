@@ -1,7 +1,7 @@
 import styles from './Compat.module.css'
 import { Link } from 'react-router-dom';
 import FriendCard from '../../components/FriendCard/FriendCard';
-
+import { useState, useEffect } from 'react'
 const Compat = (props) => {
   return (
     // <>

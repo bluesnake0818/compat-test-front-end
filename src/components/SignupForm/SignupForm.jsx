@@ -14,14 +14,15 @@ const SignupForm = props => {
     email: '',
     password: '',
     passwordConf: '',
-    birthYear: '',
+    birthYear: null,
     zodiac: '',
   })
 
   const handleChange = evt => {
     props.updateMessage('')
     if(evt.target.name === 'birthYear'){
-			const numBirthYear = parseInt(evt.target.value)
+			// const numBirthYear = parseInt(evt.target.value)
+			const numBirthYear = evt.target.value
 			if(numBirthYear%12 === 0) {
 				setFormData({...formData, 
 					zodiac: 'monkey',
@@ -127,7 +128,7 @@ const SignupForm = props => {
   const { name, email, password, passwordConf, birthYear, zodiac } = formData
 
   const isFormInvalid = () => {
-    return !(name && email && password && password === passwordConf && birthYear && zodiac)
+    return !(name && email && password && password === passwordConf && (birthYear <2021) && (birthYear>1899) && zodiac)
   }
 
   return (
@@ -197,8 +198,9 @@ const SignupForm = props => {
 							autoComplete="off"
 							margin="normal"
 							fullWidth
+							placeholder="between 1900 & 2020"
 							required
-							type="text"
+							type="number"
 							name="birthYear"
 							label="Birth Year"
 							value={birthYear}
@@ -209,6 +211,7 @@ const SignupForm = props => {
 							autoComplete="off"
 							margin="normal"
 							fullWidth
+							placeholder="automatically updated"
 							required
 							type="text"
 							name="zodiac"
