@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import styles from './NavBar.module.css'
+import PersonIcon from '@mui/icons-material/Person'
 
 const NavBar = ({ user, handleLogout }) => {
   return (
@@ -25,8 +26,8 @@ const NavBar = ({ user, handleLogout }) => {
         {user ?
           <nav>
             <ul>
-              <li className={styles.listItem}><Link to="/profile">{user.name}'s Profile</Link></li>
-
+              {/* <li className={styles.listItem}><Link to="/profile">{user.name}'s Profile</Link></li> */}
+              <li className={styles.listItem}><Link to="/profile"><PersonIcon /></Link></li>
             </ul>
           </nav>
         :
