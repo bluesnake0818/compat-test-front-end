@@ -114,7 +114,7 @@ function AddFriend(props) {
 
 	return (
 		<main className={styles.container}>
-			<h3>Enter your friend's date of birth 🎂</h3>
+			<h3 className={styles.title}>Enter your friend's date of birth 🎂</h3>
 			<Box
 				display="flex" 
 				justifyContent="center" 
@@ -122,7 +122,7 @@ function AddFriend(props) {
 				sx={{ width: "50%", mt: '5rem' }}
 			>
 				<Paper elevation={4} sx={{ width: "100%", p: "1rem" }}>
-					<form autoComplete="off" ref={formElement} onSubmit={handleSubmit}>
+					<form className={styles.form} autoComplete="off" ref={formElement} onSubmit={handleSubmit}>
 						<TextField
 							autoComplete="off"
 							margin="normal"
@@ -157,6 +157,7 @@ function AddFriend(props) {
 							onChange={handleChange}
 						/>
 						<Button
+							className={styles.button}
 							type="submit"
 							variant="contained"
 							fullWidth

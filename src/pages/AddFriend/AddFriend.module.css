@@ -2,9 +2,13 @@
   padding-left: 2rem;
   padding-right: 2rem;
   font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-form {
+.form {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -12,11 +16,11 @@ form {
   /* margin-top: 4rem; */
 }
 
-button {
+.button {
   margin-top: 6rem;
 }
 
-h3 {
+.title {
   font-size: 1.8rem;
 }
 

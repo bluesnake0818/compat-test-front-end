@@ -1,6 +1,10 @@
 import { useState, useRef, useEffect } from "react"
 import { Link, useLocation } from 'react-router-dom'
 import styles from './EditFriend.module.css'
+import Box from '@mui/material/Box'
+import Button from '@mui/material/Button'
+import Paper from '@mui/material/Paper'
+import TextField from '@mui/material/TextField'
 
 function EditFriend(props) {
   const location = useLocation()
