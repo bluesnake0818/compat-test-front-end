@@ -7,9 +7,9 @@ const Compat = (props) => {
     <main className={styles.container}>
       <h3>{props.user.name}'s compatibility test zone</h3>
       <Link to='/AddFriend'>
-        <button className='button'>Add Friend</button>
+        <button className={styles.button}>Add Friend</button>
       </Link>    
-      <div className='friend-list'>
+      <div className={styles.friendList}>
         {props.friends.length ?
             <ul>
                 {props.friends.map(friend => (

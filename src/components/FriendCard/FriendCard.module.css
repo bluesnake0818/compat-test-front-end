@@ -8,6 +8,12 @@
   height: 20rem;
 }
 
+.cardFooter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .button-area {
   display: flex;
   justify-content: space-around;
@@ -17,7 +23,7 @@
   font-size: 1.4rem;
 }
 
-.edit-button {
+.editButton {
   width: 10rem;
   font-size: 1.4rem;
   height: 3rem;
@@ -27,7 +33,7 @@
   background-color: transparent !important;
 }
 
-.delete-button {
+.deleteButton {
   width: 10rem;
   height: 3rem;
   font-size: 1.4rem;
@@ -37,19 +43,11 @@
   margin: 0 !important;
 }
 
-.friend-name {
-  color: #000000DE;
-}
 
-.compat-link {
+.compatLink {
   color: #000000DE
 }
 
-.compat-link:hover {
+.compatLink:hover {
   color:#6661f1;
-}
-
-.card-footer {
-  display: flex;
-  justify-content: space-around;
 }

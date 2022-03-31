@@ -9,7 +9,7 @@ function FriendCard({friend, handleDeleteFriend, user}) {
         <Link
           to='/showCompat' 
           state={{friend}}
-          className="compat-link"
+          className={styles.compatLink}
         >
           <h2 className="card-text">{friend.name} (see compatibility)</h2>
           
@@ -19,17 +19,17 @@ function FriendCard({friend, handleDeleteFriend, user}) {
           <li><p className="card-text">Zodiac: {friend.zodiac}</p></li>
         </ul>
       </div>
-      <div className="card-footer">
+      <div className={styles.cardFooter}>
         <Link
           to='/edit'
           state={{friend}}
         >
-          <button className='btn btn-sm btn-warning edit-button'>
+          <button className={styles.editButton}>
             Edit
           </button>
         </Link>
         <button
-          className="btn btn-sm btn-danger m-left delete-button"
+          className={styles.deleteButton}
           onClick={()=> handleDeleteFriend(friend._id)}
         >
           Delete
