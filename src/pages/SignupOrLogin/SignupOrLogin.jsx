@@ -1,16 +1,16 @@
-import styles from './SignupOrLogin.css'
+import styles from './SignupOrLogin.module.css'
 import { Link } from 'react-router-dom'
 
 const SignupOrLogin = props => {
 
   return (
-    <main className='container'>
-      <h3>Sign up to access zodiac analysis & compatibility reports for free!</h3>
-      <div className='links'>
+    <main className={styles.container}>
+      <h3 className={styles.title}>Sign up to access zodiac analysis & compatibility reports for free!</h3>
+      <div className={styles.links}>
         <Link to="/signup"><button className='button'>Signup</button></Link>
         <Link to="/login"><button className='button'>Login</button></Link>
       </div>
-      <p>If you are a returning use, please log in.</p>
+      <p className={styles.instructions}>If you are a returning user, please log in.</p>
     </main>
   )
 }
