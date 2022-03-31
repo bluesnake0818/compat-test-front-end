@@ -28,17 +28,17 @@ const App = () => {
     name: ''
   })
   
-  useEffect(()=> {
-    profileService.getAllProfiles()
-    .then(profiles => {
-      setProfile(profiles.find(profile => profile._id === user.profile))
-    })
-  }, [])
-
+  // useEffect(()=> {
+  // }, [])
+  
   useEffect(()=> {
     if(user) {
       friendService.getAll()
       .then(allFriends => setFriends(allFriends))
+      profileService.getAllProfiles()
+      .then(profiles => {
+        setProfile(profiles.find(profile => profile._id === user.profile))
+      })
     }
   }, [user])
 
