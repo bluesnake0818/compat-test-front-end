@@ -15,7 +15,7 @@
   margin: 0 auto;
 }
 
-.right-arrow {
+.rightArrow {
   position: absolute;
   top: 50%;
   right: 3.2rem;
@@ -26,7 +26,7 @@
   user-select: none;
 }
 
-.left-arrow {
+.leftArrow {
   position: absolute;
   top: 50%;
   left: 3.2rem;
@@ -42,7 +42,7 @@
   transition-duration: 1s ease;
 }
 
-.slide.active {
+.slideActive {
   opacity: 1;
   transition-duration: 1s;
   transform: scale(1.08);
@@ -57,14 +57,14 @@ h1{
   font-size: 3.2rem;
 }
 
-div.zodiac-desc {
+.desc {
   margin-top: 3rem;
   display: flex;
   flex-wrap: wrap;
   width: 30rem;
 }
 
-p.bff, p.nemesis{
+.bff, .nemesis{
   width: 15rem;
 }
 

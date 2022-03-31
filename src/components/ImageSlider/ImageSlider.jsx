@@ -21,11 +21,11 @@ const ImageSlider = ({ slides }) => {
   // }
 
 
-
+// revive the opacity for active slides (transition)
   return (
       <section className={styles.slider}>
-        <FaArrowAltCircleLeft className='left-arrow' onClick={prevSlide} />
-        <FaArrowAltCircleRight className='right-arrow' onClick={nextSlide} />
+        <FaArrowAltCircleLeft className={styles.leftArrow} onClick={prevSlide} />
+        <FaArrowAltCircleRight className={styles.rightArrow} onClick={nextSlide} />
         {SliderData.map((slide, index) => {
           return (
             <div className={index === current ? 'slide active' : 'slide'} key={index}>
@@ -33,12 +33,12 @@ const ImageSlider = ({ slides }) => {
                 index === current && 
                 (
                   <>
-                    <img src={ slide.image } alt="zodiac image" className='image' />
-                    <div className='zodiac-desc'>
+                    <img src={ slide.image } alt="zodiac image" className={styles.image} />
+                    <div className={styles.desc}>
                       <p>Zodiac: {slide.name}</p>
                       <p>Defining Traits: { slide.traits } </p> 
-                      <p className='bff'>BFF: { slide.bff } </p> 
-                      <p className='nemesis'>Nemesis: { slide.nemesis } </p> 
+                      <p className={styles.bff}>BFF: { slide.bff } </p> 
+                      <p className={styles.nemesis}>Nemesis: { slide.nemesis } </p> 
                     </div>
                   </>
                 )

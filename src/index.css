@@ -10,7 +10,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: #272727; */
   font-family: var(--mochiy_pop_one);
   min-height: 100vh;
   display: flex;

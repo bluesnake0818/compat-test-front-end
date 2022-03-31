@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
-import './App.css'
+import styles from './App.module.css'
 import * as friendService from './services/friends'
 import * as authService from './services/authService'
 import * as profileService from './services/profileService'
@@ -17,7 +17,6 @@ import Profiles from './pages/Profiles/Profiles'
 import Zodiac from './pages/Zodiac/Zodiac'
 import SignupOrLogin from './pages/SignupOrLogin/SignupOrLogin'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
-
 
 
 const App = () => {
@@ -74,7 +73,7 @@ const App = () => {
   }
   
   return (
-    <div className='mainBody'>
+    <main className={styles.container}>
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
         <Route 
@@ -148,7 +147,7 @@ const App = () => {
           }
         />
       </Routes>
-    </div>
+    </main>
   )
 }
 
