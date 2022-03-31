@@ -4,12 +4,12 @@ import FriendCard from '../../components/FriendCard/FriendCard';
 
 const Compat = (props) => {
   return (
-    <>
+    <div className={styles.loading}>
       {!props.friendsLoaded ?
         <>
           <p>Loading...</p>
         </>
-                  :
+        :
         <main className={styles.container}>    
         <h3>{props.user.name}'s compatibility test zone</h3>
         <Link to='/addFriend'>
@@ -35,7 +35,7 @@ const Compat = (props) => {
         }
       </main>
       }
-    </>
+    </div>
   )
 }
 

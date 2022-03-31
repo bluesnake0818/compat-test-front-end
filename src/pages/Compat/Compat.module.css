@@ -1,4 +1,6 @@
-.container {
+
+
+.container, .loading {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,3 +55,4 @@
 .button:focus {
   box-shadow: none;
 }
+
