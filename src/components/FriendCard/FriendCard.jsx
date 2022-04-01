@@ -7,7 +7,7 @@ function FriendCard({friend, handleDeleteFriend, user}) {
   const friendZodImg = `/designs_${friendZod}.png`
 
   return (
-    <Link className={styles.linkToProfile} to="/profile">
+    <Link className={styles.linkToShowCompat} state={{friend}} to="/showCompat">
       <div className={styles.card}>
         <ul className={styles.list}>
           <li className={styles.listItem}>

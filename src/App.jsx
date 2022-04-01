@@ -130,7 +130,6 @@ const App = () => {
           path="/showCompat"
           element={
             <ShowCompat 
-              // handleDeleteFriend={handleDeleteFriend}
               friends={friends}
               user={user}
             />
