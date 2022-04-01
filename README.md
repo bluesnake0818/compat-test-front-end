@@ -1,4 +1,4 @@
-# Chinese Zodiac Compatibility 
+# Zodiac Sings & Compatibility 
 
 ## A MERN Stack CRUD Application
 
