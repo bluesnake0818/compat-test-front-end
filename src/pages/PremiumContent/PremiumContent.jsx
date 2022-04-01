@@ -7,31 +7,61 @@ const PremiumContent = props => {
 
   return (
     <main className={styles.container}>
-      <h1 className={styles.title}>Hello, {props.user.name}!</h1>
-      <h3 className={styles.title}>Choose your service.</h3>
-        <Link className={styles.link} to="/profile"><button className={styles.button}>Analyze my zodiac sign</button></Link>
-        {/* <div className={styles.zodAnalysisChoice}> */}
-        <img className={styles.image} src={yourZodImg} alt="zodiac sign" />
-        {/* </div> */}
-        <Link className={styles.link} to="/compat"><button className={styles.button}>Read compatibility reports</button></Link>
-        <div className={styles.compatChoice}>
-          <img className={styles.image} src={yourZodImg} alt="zodiac sign" /> 
-          <p className={styles.paragraph}>vs</p> 
-          <img className={styles.image} src='12_Earthly_Branches.png' alt="12 Zodiacs" />
-        </div>
-      <h3 className={styles.title}>Affiliate Services</h3>
+      <h3 className={styles.title}>Main Services</h3>
+      <div className={styles.mainServices}>
+        <Link className={styles.linkToProfile} to="/profile">
+          <h5 className={styles.cardTitle}>Personalized zodiac analysis</h5>
+          <div className={styles.card}>
+            <ul className={styles.list}>
+              <li className={styles.listItem}>
+                Strengths & Weaknesses
+              </li>
+              <li className={styles.listItem}>
+                Celebs with same zodiac sign
+              </li>
+              <li className={styles.listItem}>
+                Zodiac signs to stay close with
+              </li>
+              <li className={styles.listItem}>
+                Zodiac signs to avoid
+              </li>
+              <li className={styles.listImgItem}>
+                <img className={styles.imgInCard} src={yourZodImg} alt="" />
+              </li>
+            </ul>
+          </div>
+        </Link>
+        <Link className={styles.linkToCompat} to="/compat">
+          <h5 className={styles.cardTitle}>In depth compatibility analysis</h5>
+          <div className={styles.card}>
+            <ul className={styles.list}>
+              <li className={styles.listItem}>
+                Where you click
+              </li>
+              <li className={styles.listItem}>
+                Where you clash
+              </li>
+              <li className={styles.listItem}>
+                How to Mitigate problems
+              </li>
+              <li className={styles.listImgItem}>
+                <img className={styles.imgInCard} src='12_Earthly_Branches.png' alt="" />
+              </li>
+            </ul>
+          </div>
+        </Link>
+      </div>
 
+      <h3 className={styles.title}>Affiliate Services</h3>
       <div className={styles.affiliateServices}>
         <a className={styles.linkAffiliate} href="https://chinese-zodiac-slot-machine.surge.sh/" target="_blank">
           <img className={styles.thumbnail} src="/Slot Machine.png" alt="" />
           <p className={styles.paragraph}>Chinese zodiac slot machine game</p>
         </a>
-
         <a className={styles.linkAffiliate} href="https://zodiac-counterparts.herokuapp.com/" target="_blank">
           <img className={styles.thumbnail} src="/Zodiac Counter Part.png" alt="" />
           <p className={styles.paragraph}>Western vs. Eastern zodiac signs</p>
         </a>
-
         <a className={styles.linkAffiliate} href="https://apps.apple.com/us/app/id1531290410" target="_blank">
           <img className={styles.thumbnail} src="/App.png" alt="" />
           <p className={styles.paragraph}>Zodiac-based social discovery app</p>
