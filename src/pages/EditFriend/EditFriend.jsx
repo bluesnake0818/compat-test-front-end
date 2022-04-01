@@ -111,7 +111,7 @@ function EditFriend(props) {
 
 	return (
 		<main className={styles.container}>
-			<h3 className={styles.title}>Edit your friend's personal info.</h3>
+			<h2 className={styles.title}>Edit your friend's info.</h2>
 			<Box
 				display="flex" 
 				justifyContent="center" 
