@@ -87,15 +87,15 @@ const App = () => {
         />
         <Route
           path="/signupOrLogin"
-          element={<SignupOrLogin />}
+          element={!user ? <SignupOrLogin /> : <PremiumContent user={user} profile={profile}/>}
         />
         <Route
           path="/signup"
-          element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
+          element={!user ? <Signup handleSignupOrLogin={handleSignupOrLogin} /> : <PremiumContent user={user} profile={profile}/>}
         />
         <Route
           path="/login"
-          element={<Login handleSignupOrLogin={handleSignupOrLogin} />}
+          element={!user ? <Login handleSignupOrLogin={handleSignupOrLogin} /> : <PremiumContent user={user} profile={profile}/>}
         />
         <Route
           path="/changePassword"

@@ -11,7 +11,7 @@ const Compat = (props) => {
         </>
         :
         <main className={styles.container}>    
-        <h3>{props.user.name}'s compatibility test zone</h3>
+        <h2>{props.user.name}'s compatibility tests</h2>
         <Link to='/addFriend'>
           <button className={styles.button}>Add Friend</button>
         </Link>    

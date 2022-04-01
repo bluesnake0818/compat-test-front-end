@@ -6,7 +6,7 @@
   color: white;
 }
 
-h5 {
+.title, .subTitle {
   text-align: center;
   padding-left: 4rem;
   padding-right: 4rem;

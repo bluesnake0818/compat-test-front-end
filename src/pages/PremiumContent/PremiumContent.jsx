@@ -28,7 +28,7 @@ const PremiumContent = props => {
         <a className={styles.link} href="https://zodiac-counterparts.herokuapp.com/" target="_blank">Zodiac Counterparts</a>
       </div>
       <div className={styles.card}>
-        <a className={styles.link} href="https://apps.apple.com/us/app/hang5-find-your-zodiac-bff/id1531290410" target="_blank">hangfive - Zodiac Signs & Chat</a>
+        <a className={styles.link} href="https://apps.apple.com/us/app/id1531290410" target="_blank">hangfive - Zodiac Signs & Chat</a>
       </div>
     </main>
   )

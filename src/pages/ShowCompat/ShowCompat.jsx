@@ -17,7 +17,7 @@ function ShowCompat({ user }) {
 
   return (
     <main className={styles.container}>
-      <h3>{friend.owner.name} & {friend.name}'s Compat</h3>
+      <h2>{friend.owner.name} & {friend.name}'s Compat</h2>
       <div className={styles.card}>
         <div className="card-body">
           <ul className={styles.list}>

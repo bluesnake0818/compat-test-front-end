@@ -30,10 +30,10 @@ const Profile = (props) => {
         </>
         :
         <div className={styles.container}>
-          <h3>{zodiacObj.name} - {zodiacObj.archetype}</h3>
+          <h2>{zodiacObj.name} - {zodiacObj.archetype}</h2>
           <img src={yourZodImg} alt="" className={styles.image}/>
 
-          <h5>Description</h5>
+          <h3>Description</h3>
           <div className={styles.card}>
             <ul className={styles.list}>
               <li className={styles.listItem}>
@@ -42,7 +42,7 @@ const Profile = (props) => {
             </ul>
           </div>
 
-          <h5>Celebs in {yourZod}</h5>
+          <h3>Celebs in {yourZod}</h3>
           <div className={styles.card}>
             <ul className={styles.list}>  
               <li className={styles.listItem}><StarIcon /> {zodiacObj.celeb1}</li>
@@ -51,7 +51,7 @@ const Profile = (props) => {
             </ul>
           </div>
 
-          <h5>Your best friend</h5>
+          <h3>Your best friend</h3>
           <div className={styles.card}>
             <ul className={styles.list}>  
               <li className={styles.listItem}>
@@ -61,7 +61,7 @@ const Profile = (props) => {
             </ul>
           </div>
 
-          <h5>Your worst enemy</h5>
+          <h3>Your worst enemy</h3>
           <div className={styles.card}>
             <ul className={styles.list}>  
               <li className={styles.listItem}>
@@ -83,18 +83,3 @@ const Profile = (props) => {
 
 
 export default Profile;
-
-// {ZodiacData.find(zodiac => zodiac.id === profile.id 
-//   .then (return (
-//     <img src={ zodiac.image } alt="zodiac image" className='image' />
-//     {<div className='zodiac-desc'>
-//       <p>Zodiac: {zodiac.name}</p>
-//       <p>Defining Traits: { zodiac.traits } </p> 
-//       <p className='bff'>BFF: { zodiac.bff } </p> 
-//       <p className='nemesis'>Nemesis: { zodiac.nemesis } </p> 
-//     </div>}
-//   ))
-  
-
-//     ) 
-//   }
