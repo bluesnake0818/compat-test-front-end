@@ -65,7 +65,7 @@ export const SliderData = [
   { 
     image: '/designs_goat.png',
     name: 'Goat',
-    traits: 'Meek, Loyal',
+    traits: 'Meek, Loyal, free-spiritied',
     bff: 'Horse',
     nemesis: 'Ox',
     years: '',
