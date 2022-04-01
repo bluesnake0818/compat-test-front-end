@@ -5,7 +5,7 @@ export const SliderData = [
     traits: 'Acute, Cautious, Calm',
     bff: 'Ox',
     nemesis: 'Horse',
-    years: '',
+    years: '1972, 1984, 1996, 2008',
     element: '',
   },
   { 
@@ -14,7 +14,7 @@ export const SliderData = [
     traits: 'Persistent, Cautious, Patient',
     bff: 'Rat',
     nemesis: 'Goat',
-    years: '',
+    years: '1973, 1985, 1997, 2009',
     element: '',
   },
   { 
@@ -23,7 +23,7 @@ export const SliderData = [
     traits: 'Powerful, Tough, Dynamic, Mighty',
     bff: 'Pig',
     nemesis: 'Monkey',
-    years: '',
+    years: '1974, 1986, 1998, 2010',
     element: '',
   },
   { 
@@ -32,7 +32,7 @@ export const SliderData = [
     traits: 'Gentle, Generous, Timid',
     bff: 'Dog',
     nemesis: 'Rooster',
-    years: '',
+    years: '1975, 1987, 1999, 2011',
     element: '',
   },
   { 
@@ -41,7 +41,7 @@ export const SliderData = [
     traits: 'Mysterious, Imaginative, Ambitious',
     bff: 'Rooster',
     nemesis: 'Dog',
-    years: '',
+    years: '1976, 1988, 2000, 2012',
     element: '',
   },
   { 
@@ -50,7 +50,7 @@ export const SliderData = [
     traits: 'Wise, Humorous, Brilliant',
     bff: 'Monkey',
     nemesis: 'Pig',
-    years: '',
+    years: '1977, 1989, 2001, 2013',
     element: '',
   },
   { 
@@ -59,7 +59,7 @@ export const SliderData = [
     traits: 'Energetic, Passionate',
     bff: 'Goat',
     nemesis: 'Rat',
-    years: '',
+    years: '1978, 1990, 2002, 2014',
     element: '',
   },
   { 
@@ -68,7 +68,7 @@ export const SliderData = [
     traits: 'Meek, Loyal, free-spiritied',
     bff: 'Horse',
     nemesis: 'Ox',
-    years: '',
+    years: '1979, 1991, 2003, 2015',
     element: '',
   },
   { 
@@ -77,7 +77,7 @@ export const SliderData = [
     traits: 'Cautious, Clever, Energetic',
     bff: 'Snake',
     nemesis: 'Tiger',
-    years: '',
+    years: '1980, 1992, 2004, 2016',
     element: '',
   },
   { 
@@ -86,7 +86,7 @@ export const SliderData = [
     traits: 'Ambitious, Meticulous, Independent',
     bff: 'Dragon',
     nemesis: 'Rabbit',
-    years: '',
+    years: '1981, 1993, 2005, 2017',
     element: '',
   },
   { 
@@ -95,7 +95,7 @@ export const SliderData = [
     traits: 'Loyal, Flexible, Gentle',
     bff: 'Rabbit',
     nemesis: 'Dragon',
-    years: '',
+    years: '1982, 1994, 2006, 2018',
     element: '',
   },
   { 
@@ -104,7 +104,7 @@ export const SliderData = [
     traits: 'Optimistic, Gluttonous, Sleepy',
     bff: 'Tiger',
     nemesis: 'Snake',
-    years: '',
+    years: '1983, 1995, 2017, 2019',
     element: '',
   }    
 ]

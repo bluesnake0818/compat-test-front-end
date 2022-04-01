@@ -31,6 +31,7 @@ const ImageSlider = () => {
                     <div className={styles.desc}>
                       <p>Zodiac: {slide.name}</p>
                       <p>Defining Traits: { slide.traits } </p> 
+                      <p>Birth Years: { slide.years } </p> 
                       <p className={styles.bff}>BFF: { slide.bff } </p> 
                       <p className={styles.nemesis}>Nemesis: { slide.nemesis } </p> 
                       <Link to='/PremiumContent'><button className={styles.button}>Learn More</button></Link>    
