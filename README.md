@@ -30,7 +30,8 @@
 <img src="https://i.imgur.com/S74fKin_d.webp?maxwidth=760&fidelity=grand" alt="original wireframes">
 
 ## ERD
-<img src="" alt="ERD">
+<img src="https://i.imgur.com/jvanh4O_d.webp?maxwidth=760&fidelity=grand" alt="Final">
+<img src="https://i.imgur.com/nmaOp30_d.webp?maxwidth=760&fidelity=grand" alt="Initial">
 
 ## Challenges
 - 
@@ -39,7 +40,12 @@
 - 
 
 ## Next Steps (backlog)
-- 
+- Personality Tests
+- Daily Compatibility updates
+- Year Zodiac --> Day Zodiac
+- Messaging system, Community Board
+- Upload more info (Zodiac, Compat, Story)
+- Horoscopes
 
 
 
