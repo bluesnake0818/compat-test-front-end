@@ -1,8 +1,7 @@
 .card {
-  background-color: whitesmoke;
+  background-color: rgba(255, 255, 255);
   color: #000000DE;
   border-radius: 1rem;
-  border-style:solid;
   padding: 1rem;
   width: 30rem;
   min-height: 20rem;
