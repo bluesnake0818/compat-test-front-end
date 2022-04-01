@@ -2,7 +2,7 @@ import { ZodiacData } from './ZodiacData';
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Profile.module.css'
-import StarIcon from '@mui/icons-material/Star';
+
 
 const Profile = (props) => {
   const [zodiacs, setZodiacs] = useState(ZodiacData)
@@ -45,9 +45,9 @@ const Profile = (props) => {
           <h3>Celebs in {yourZod}</h3>
           <div className={styles.card}>
             <ul className={styles.list}>  
-              <li className={styles.listItem}><StarIcon /> {zodiacObj.celeb1}</li>
-              <li className={styles.listItem}><StarIcon /> {zodiacObj.celeb2}</li>
-              <li className={styles.listItem}><StarIcon /> {zodiacObj.celeb3}</li>
+              <li className={styles.listItem}> {zodiacObj.celeb1}</li>
+              <li className={styles.listItem}> {zodiacObj.celeb2}</li>
+              <li className={styles.listItem}> {zodiacObj.celeb3}</li>
             </ul>
           </div>
 

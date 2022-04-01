@@ -14,15 +14,30 @@
 } */
 
 .userNavLinks, .guestNavLinks {
+  display: flex;
   list-style-type: none;
   width: 60%;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  display: flex;
   /* flex-direction: column; */
   justify-content: center;
   
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+
+.link {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  align-items: center;
+  /* flex-direction: column; */
+  justify-content: center;
 }
 
 .title {
@@ -49,8 +64,6 @@
   width: 100%;
 }
 
-a {
-  text-decoration: none;
-  color: white;
-  font-size: 1rem;
+.paragraph {
+  margin: 0.2rem auto;
 }
