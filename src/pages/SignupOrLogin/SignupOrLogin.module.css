@@ -48,5 +48,10 @@
 }
 
 .instructions {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  text-decoration: underline;     
+}
+
+.instructions:hover {
+  color: #6661F1;
 }
