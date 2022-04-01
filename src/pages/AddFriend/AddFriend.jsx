@@ -21,7 +21,6 @@ function AddFriend(props) {
 
   const handleChange = evt => {
 		if(evt.target.name === 'birthYear'){
-			// const numBirthYear = parseInt(evt.target.value)
 			const numBirthYear = evt.target.value
 			if(numBirthYear%12 === 0) {
 				setFormData({...formData, 

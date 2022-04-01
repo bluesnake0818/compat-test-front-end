@@ -7,20 +7,6 @@ import LogoutIcon from '@mui/icons-material/Logout';
 const NavBar = ({ user, handleLogout }) => {
   return (
     <main className={styles.container}>
-      {/* <div className='navLinks'>
-        {user ?
-          <nav>
-            <ul>
-              <li>Welcome, {user.name}</li>
-              <li><Link to="/changePassword">Change Password</Link></li>
-            </ul>
-          </nav>
-        :
-          <nav>
-
-          </nav>
-        }
-      </div> */}
       <Link to="/" className={styles.title}>
         <p >hangfive</p>
       </Link>

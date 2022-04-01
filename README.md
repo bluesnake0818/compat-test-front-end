@@ -1,17 +1,23 @@
-# Zodiac Compatibility Test
+# Chinese Zodiac Compatibility Analysis
 
 ## A MERN Stack CRUD Application
 
 ## Why I Started This
-- 
+- Continuing from Unit 1 and 2, I built this app for marketing my app, a Chinese zodiac-based friend discovery app, and raise awareness of/build interest in Chinese astrology in the US.
+- Unit 1 & 2 more for Top of Funnel users
+- This is app is more focused on down the funnel (middle of the funnel) From this point forward, it's more content education
+- Content-wise, compatibilty is the core. there will be horoscope, compat, and personality content. 
+- They will all come together at the end.
+
 
 ## Key Features
-- Zodiac Profile 
-- Zodiac Compatibility
+- Personalized zodiac analysis
+- Compatibility anlysis
 
 
 ## Getting Started
-- <a href="https://compat-test-front-end.netlify.app/">Link</a>
+- <a href="https://compat-test-front-end.netlify.app/"> App Link</a>
+- <a href="https://trello.com/b/s4o6JyK9/unit-3-project"> Trello Board Link</a>
 
 
 ## Screenshots
@@ -23,7 +29,7 @@
 
 ## Credits
 - Emojis, content: Hang5 (https://www.hangfive.co)
-- Imager Slider: Brian Design, https://www.youtube.com/watch?v=l1MYfu5YWHc 
+- Image Slider: Brian Design, https://www.youtube.com/watch?v=l1MYfu5YWHc 
 
 ## Pitch Deck
 

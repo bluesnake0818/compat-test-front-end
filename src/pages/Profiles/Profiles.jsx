@@ -27,9 +27,3 @@ const Profiles = (props) => {
 }
  
 export default Profiles
-
-// {profiles.map((profile, index) => {
-//   if(profile._id === props.user.profile) {
-//     <p key={index}>{profile.name}</p>
-// }}
-// )}

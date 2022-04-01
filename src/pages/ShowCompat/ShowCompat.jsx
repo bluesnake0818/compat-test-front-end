@@ -17,17 +17,17 @@ function ShowCompat({ user }) {
 
   return (
     <main className={styles.container}>
-      <h2>{friend.owner.name} & {friend.name}'s Compat</h2>
+      <h2 className={styles.title}>Compatibility Analysis</h2>
       <div className={styles.card}>
-        <div className="card-body">
-          <ul className={styles.list}>
-            <li>{friend.owner.name}'s zodiac is {yourZod}.</li>
-            <li><img src={yourZodImg} alt="zodiac image" className={styles.image} /></li>
-            <li>{friend.name}'s zodiac is {theirZod}.</li>
-            <li><img src={theirZodImg} alt="zodiac image" className={styles.image} /></li>
-            <li>{compats[yourZod][theirZod]}</li>
-          </ul>
-        </div>
+        <ul className={styles.list}>
+          <li className={styles.listItemImg}>
+            <img className={styles.image} src={yourZodImg} alt="zodiac image" />
+            <img className={styles.image} src={theirZodImg} alt="zodiac image"  /> 
+          </li>
+          <li className={styles.listItemCompatText}>
+            {compats[yourZod][theirZod]}
+          </li>
+        </ul>
       </div>
     </main>
   )

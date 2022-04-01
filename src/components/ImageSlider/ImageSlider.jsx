@@ -15,14 +15,7 @@ const ImageSlider = () => {
   const prevSlide = () => {
     setCurrent(current === 0 ? length - 1 : current -1)
   }
-  
-  //checking if the array is not empty --> not needed since I'm starting with a filled array.
-  // if(!Array.isArray(slides) || slides.length <= 0) {
-  //   return null;
-  // }
 
-
-// revive the opacity for active slides (transition)
   return (
       <section className={styles.slider}>
         <FaArrowAltCircleLeft className={styles.leftArrow} onClick={prevSlide} />
