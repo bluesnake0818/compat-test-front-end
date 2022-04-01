@@ -1,4 +1,4 @@
-# Chinese Zodiac Compatibility Analysis
+# Chinese Zodiac Compatibility 
 
 ## A MERN Stack CRUD Application
 
@@ -11,8 +11,8 @@
 - So compatibility is at the core of what Eastern astrology offers, because it was primarily used for matrimony in the past. Then character analysis and horoscopes make up the other two pillars of the tripod of Eastern astrology. I have just a little bit of compatibility and character analysis content up as of now, but will eventually populate the app with more content from all of these three sections. 
 
 ## Key Features
-- Personalized zodiac analysis
-- Compatibility anlysis
+- Personalized zodiac analysis : You can sign up by entering your birth year, and you should be access your zodiac analysis 
+- Compatibility anlysis : You can create a friend by entering her birth year, and you can access the compatibility report between you and your friend. 
 
 ## Getting Started
 - <a href="https://compat-test-front-end.netlify.app/"> App Link</a>
@@ -27,8 +27,6 @@
 ## Credits
 - Emojis, content: hangfive (https://www.hangfive.co)
 - Image Slider: Brian Design, https://www.youtube.com/watch?v=l1MYfu5YWHc 
-
-## Pitch Deck
 
 ## Original Wireframes
 <img src="https://i.imgur.com/S74fKin_d.webp?maxwidth=760&fidelity=grand" alt="original wireframes">
@@ -54,13 +52,9 @@
 - Pagination
 - Overflow scroll
 - Daily Compatibility updates
-- Year Zodiac --> Day Zodiac
+- Year Zodiac --> Day Zodiac, birth chart, elements
 - Messaging system, Community Board
 - Upload more info (Zodiac, Compat, Story)
 - Bug fixes
 - Desktop responsive
-
-
-
-
-
+- Scroll through content only wihtout enlarging the container box.
