@@ -45,7 +45,7 @@
 - Accessing array vs. object.. when coupled with re-redering (useState, useEffect)... it was difficult to debug 
 
 ## Next Steps (backlog)
-- More personalized content - horoscopes, character analysis
+- More personalized content - horoscopes, character analysis, compat chart
 - Personality Tests
 - Personalized Profiles
 - Allow friendship
