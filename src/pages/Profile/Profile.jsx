@@ -23,50 +23,58 @@ const Profile = (props) => {
   const yourNemesisImg = `/designs_${nemesis}.png`
 
   return (
-    <div className={styles.container}>
-      <h3>{zodiacObj.name} - {zodiacObj.archetype}</h3>
-      <img src={yourZodImg} alt="" className={styles.image}/>
+    <div className={styles.loading}>
+      {!props.profile.name ?
+        <>
+          <p>Loading...</p>
+        </>
+        :
+        <div className={styles.container}>
+          <h3>{zodiacObj.name} - {zodiacObj.archetype}</h3>
+          <img src={yourZodImg} alt="" className={styles.image}/>
 
-      <h5>Description</h5>
-      <div className={styles.card}>
-        <ul className={styles.list}>
-          <li className={styles.listItem}>
-            {zodiacObj.desc}
-          </li>
-        </ul>
-      </div>
+          <h5>Description</h5>
+          <div className={styles.card}>
+            <ul className={styles.list}>
+              <li className={styles.listItem}>
+                {zodiacObj.desc}
+              </li>
+            </ul>
+          </div>
 
-      <h5>Celebs in {yourZod}</h5>
-      <div className={styles.card}>
-        <ul className={styles.list}>  
-          <li className={styles.listItem}><StarIcon /> {zodiacObj.celeb1}</li>
-          <li className={styles.listItem}><StarIcon /> {zodiacObj.celeb2}</li>
-          <li className={styles.listItem}><StarIcon /> {zodiacObj.celeb3}</li>
-        </ul>
-      </div>
+          <h5>Celebs in {yourZod}</h5>
+          <div className={styles.card}>
+            <ul className={styles.list}>  
+              <li className={styles.listItem}><StarIcon /> {zodiacObj.celeb1}</li>
+              <li className={styles.listItem}><StarIcon /> {zodiacObj.celeb2}</li>
+              <li className={styles.listItem}><StarIcon /> {zodiacObj.celeb3}</li>
+            </ul>
+          </div>
 
-      <h5>Your best friend</h5>
-      <div className={styles.card}>
-        <ul className={styles.list}>  
-          <li className={styles.listItem}>
-            <p>Most Compatible: {zodiacObj.bff}</p>
-            <img className={styles.image} src={yourBffImg} alt="" />
-          </li>
-        </ul>
-      </div>
+          <h5>Your best friend</h5>
+          <div className={styles.card}>
+            <ul className={styles.list}>  
+              <li className={styles.listItem}>
+                <p>Most Compatible: {zodiacObj.bff}</p>
+                <img className={styles.image} src={yourBffImg} alt="" />
+              </li>
+            </ul>
+          </div>
 
-      <h5>Your worst enemy</h5>
-      <div className={styles.card}>
-        <ul className={styles.list}>  
-          <li className={styles.listItem}>
-            <p>Worst Enemy: {zodiacObj.nemesis}</p>
-            <img className={styles.image} src={yourNemesisImg} alt="" />
-          </li>
-        </ul>
-      </div>
-      <Link to="" onClick={props.handleLogout}>
-          <button className={styles.button}>Log Out</button>
-      </Link>
+          <h5>Your worst enemy</h5>
+          <div className={styles.card}>
+            <ul className={styles.list}>  
+              <li className={styles.listItem}>
+                <p>Worst Enemy: {zodiacObj.nemesis}</p>
+                <img className={styles.image} src={yourNemesisImg} alt="" />
+              </li>
+            </ul>
+          </div>
+          <Link to="" onClick={props.handleLogout}>
+              <button className={styles.button}>Log Out</button>
+          </Link>
+        </div>
+      }
     </div>
   )
 }
