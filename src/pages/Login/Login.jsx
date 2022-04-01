@@ -12,7 +12,6 @@ const LoginPage = props => {
   return (
     <main className={styles.container}>
       <h3 className={styles.title}>Log In</h3>
-      <p>{message}</p>
       <LoginForm
         handleSignupOrLogin={props.handleSignupOrLogin}
         updateMessage={updateMessage}

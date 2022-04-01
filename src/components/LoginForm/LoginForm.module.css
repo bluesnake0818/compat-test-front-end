@@ -1,12 +1,10 @@
 .container {
   display: flex;
-  flex-flow: column nowrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
   padding-left: 2rem;
   padding-right: 2rem;
-  width: 100%;
 }
 
 .form {
@@ -14,7 +12,6 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  /* margin-top: 4rem; */
 }
 
 .link {
@@ -27,11 +24,3 @@
   height: 4rem;
   border-radius: 10px;
 }
-
-/* .inputField {
-  margin-bottom: 1rem;
-} */
-
-/* .title {
-  font-size: 1.8rem;
-} */

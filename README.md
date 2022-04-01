@@ -27,7 +27,7 @@
 ## Pitch Deck
 
 ## Original Wireframes
-<img src="" alt="original wireframes">
+<img src="https://i.imgur.com/S74fKin_d.webp?maxwidth=760&fidelity=grand" alt="original wireframes">
 
 ## ERD
 <img src="" alt="ERD">

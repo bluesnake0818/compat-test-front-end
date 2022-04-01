@@ -19,16 +19,23 @@ const PremiumContent = props => {
           <p className={styles.paragraph}>vs</p> 
           <img className={styles.image} src='12_Earthly_Branches.png' alt="12 Zodiacs" />
         </div>
-      <h3 className={styles.title}>Check out our sister apps.</h3>
+      <h3 className={styles.title}>Affiliate Services</h3>
 
-      <div className={styles.card}>
-        <a className={styles.link} href="https://chinese-zodiac-slot-machine.surge.sh/" target="_blank">Chinese Zodiac Slot Machine</a>
-      </div>
-      <div className={styles.card}>
-        <a className={styles.link} href="https://zodiac-counterparts.herokuapp.com/" target="_blank">Zodiac Counterparts</a>
-      </div>
-      <div className={styles.card}>
-        <a className={styles.link} href="https://apps.apple.com/us/app/id1531290410" target="_blank">hangfive - Zodiac Signs & Chat</a>
+      <div className={styles.affiliateServices}>
+        <a className={styles.linkAffiliate} href="https://chinese-zodiac-slot-machine.surge.sh/" target="_blank">
+          <img className={styles.thumbnail} src="/Slot Machine.png" alt="" />
+          <p className={styles.paragraph}>Chinese zodiac slot machine game</p>
+        </a>
+
+        <a className={styles.linkAffiliate} href="https://zodiac-counterparts.herokuapp.com/" target="_blank">
+          <img className={styles.thumbnail} src="/Zodiac Counter Part.png" alt="" />
+          <p className={styles.paragraph}>Western vs. Eastern zodiac signs</p>
+        </a>
+
+        <a className={styles.linkAffiliate} href="https://apps.apple.com/us/app/id1531290410" target="_blank">
+          <img className={styles.thumbnail} src="/App.png" alt="" />
+          <p className={styles.paragraph}>Zodiac-based social discovery app</p>
+        </a>
       </div>
     </main>
   )

@@ -1,6 +1,5 @@
 .slider {
   position: relative;
-  height: 60vh;
   width: 50rem;
   display: flex;
   flex-direction: column;
@@ -68,3 +67,6 @@ h1{
   width: 15rem;
 }
 
+.button {
+  margin-top: 7rem;
+}

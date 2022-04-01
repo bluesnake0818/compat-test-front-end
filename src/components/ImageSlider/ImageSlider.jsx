@@ -2,6 +2,7 @@ import styles from './ImageSlider.module.css'
 import React, {useState} from 'react'
 import { SliderData } from './SliderData';
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'
+import { Link } from 'react-router-dom';
 
 const ImageSlider = () => {
   const [current, setCurrent] = useState(0)
@@ -39,6 +40,7 @@ const ImageSlider = () => {
                       <p>Defining Traits: { slide.traits } </p> 
                       <p className={styles.bff}>BFF: { slide.bff } </p> 
                       <p className={styles.nemesis}>Nemesis: { slide.nemesis } </p> 
+                      <Link to='/PremiumContent'><button className={styles.button}>Learn More</button></Link>    
                     </div>
                   </>
                 )
