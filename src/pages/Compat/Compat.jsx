@@ -7,19 +7,25 @@ const Compat = (props) => {
     <div className={styles.loading}>
       {!props.friendsLoaded ?
         <>
-          <p>Loading...</p>
+          <h3>Loading...</h3>
         </>
         :
         <main className={styles.container}>    
-        <h2>{props.user.name}'s compatibility tests</h2>
+        <h2>Compatibility Reports</h2>
         <Link to='/addFriend'>
           <button className={styles.button}>Add Friend</button>
         </Link>    
+        
+        <div className={styles.friendListTitle}>
+          <p className={styles.friendListTitleParagraph}>Friends</p>
+        </div>
+
         {props.friends.length ?
           <ul className={styles.list}>
             {props.friends.map((friend, index) => 
               (friend.owner._id === props.user.profile) &&
                 <li key={index} className={styles.listItem}>
+                  <h5 className={styles.cardTitle}>{friend.name}</h5>
                   <FriendCard
                     key={friend._id} 
                     friend={friend} 
