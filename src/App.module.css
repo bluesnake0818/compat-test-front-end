@@ -5,6 +5,7 @@
   background-color: #272727;
   border-radius: 10px;
   padding: 1rem;
+  padding-bottom: 4rem;
 }
 
 button {
@@ -29,3 +30,4 @@ button:hover {
 button:focus {
   box-shadow: none;
 }
+

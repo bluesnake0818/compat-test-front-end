@@ -30,15 +30,15 @@ const Profile = (props) => {
         </>
         :
         <div className={styles.container}>
-          <h2>{zodiacObj.name} - {zodiacObj.archetype}</h2>
-          <img src={yourZodImg} alt="" className={styles.image}/>
+          <h2>{props.profile.name}'s Profile</h2>
+          <img src={yourZodImg} alt="" className={styles.profileImage}/>
 
           <h3>Description</h3>
           <div className={styles.card}>
             <ul className={styles.list}>
-              <li className={styles.listItem}>
-                {zodiacObj.desc}
-              </li>
+              <li className={styles.listItem}>Zodiac Sign: {zodiacObj.name}</li>
+              <li className={styles.listItem}>{zodiacObj.archetype}</li>
+              <li className={styles.listItem}>{zodiacObj.desc}</li>
             </ul>
           </div>
 

@@ -18,7 +18,12 @@
 .list {
   width: 100%;
   list-style: none;
-  padding: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
 }
 
 .image {
@@ -27,3 +32,12 @@
   margin: 0 0 3rem 0;
 }
 
+.profileImage {
+  width: 20rem;
+  height: 20rem;
+  margin: 3rem 0 3rem 0;
+}
+
+.listItem {
+  margin-bottom: 1rem;
+}
