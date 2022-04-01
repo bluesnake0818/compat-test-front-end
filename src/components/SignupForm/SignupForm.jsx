@@ -21,7 +21,6 @@ const SignupForm = props => {
   const handleChange = evt => {
     props.updateMessage('')
     if(evt.target.name === 'birthYear'){
-			// const numBirthYear = parseInt(evt.target.value)
 			const numBirthYear = evt.target.value
 			if(numBirthYear%12 === 0) {
 				setFormData({...formData, 
