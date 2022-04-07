@@ -55,5 +55,14 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+
+    <script>
+      document.addEventListener("click", function(event) {
+        if (event.target.id === 'start-button') {
+          gtag('event', 'start_btn_click')
+        }
+      })
+    </script>
   </body>
 </html>

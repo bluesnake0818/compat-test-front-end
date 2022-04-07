@@ -56,5 +56,5 @@
 - Messaging system, Community Board
 - Upload more info (Zodiac, Compat, Story)
 - Bug fixes
-- Desktop responsive
+- Responsive Design
 - Scroll through content only wihtout enlarging the container box.

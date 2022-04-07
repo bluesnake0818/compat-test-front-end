@@ -6,7 +6,7 @@ const Landing = () => {
     <main className={styles.container}>
       <h2 className={styles.title}>Zodiac Signs & Compatibility</h2>
       <img src="/12_Earthly_Branches.png" alt="12 Zodiacs" />
-      <Link to='/zodiac'><button className={styles.button}>Start</button></Link>
+      <Link to='/zodiac'><button className={styles.button} id='start_button'>Start</button></Link>
     </main>
   )
 }
