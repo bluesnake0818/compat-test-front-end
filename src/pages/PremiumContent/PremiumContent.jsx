@@ -62,7 +62,7 @@ const PremiumContent = props => {
           <img className={styles.thumbnail} src="/Zodiac Counter Part.png" alt="" />
           <p className={styles.paragraph}>Western vs. Eastern zodiac signs</p>
         </a>
-        <a className={styles.linkAffiliate} href="https://apps.apple.com/us/app/id1531290410" target="_blank">
+        <a className={styles.linkAffiliate} href="https://hangfive.page.link/rW95" target="_blank">
           <img className={styles.thumbnail} src="/App.png" alt="" />
           <p className={styles.paragraph}>Zodiac-based social discovery app</p>
         </a>
